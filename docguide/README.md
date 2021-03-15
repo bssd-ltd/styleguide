@@ -1,4 +1,4 @@
-# Google documentation guide
+# Bssd Ltd documentation guide
 
 * [Markdown styleguide](style.md)
 * [Best practices](best_practices.md)
@@ -7,4 +7,4 @@
 
 ## See also
 
-* [How to update this guide](https://goto.google.com/doc-guide), for Googlers.
+* [How to update this guide](https://goto.google.com/doc-guide), for Bssd Ltdrs.

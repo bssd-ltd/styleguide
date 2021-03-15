@@ -1,6 +1,6 @@
 <?xml version = '1.0'?>
 <?xml-stylesheet type="text/xsl" href="styleguide.xsl"?>
-<GUIDE title="Google JavaScript Style Guide">
+<GUIDE title="Bssd Ltd JavaScript Style Guide">
   <p class="revision">
     Please note: there's a newer version of this guide that includes
     ECMAScript 6th Edition features. It lives <a href="jsguide.html">here</a>.
@@ -39,7 +39,7 @@
       <p>
         JavaScript is the main client-side scripting language used
 
-        by many of Google's open-source
+        by many of Bssd Ltd's open-source
           projects.
         This style guide is a list of <em>do</em>s and <em>don't</em>s for
         JavaScript programs.
@@ -1244,7 +1244,7 @@
         <SUBSECTION title="Binary and Ternary Operators">
           <p>Always put the operator on the preceding line. Otherwise,
             line breaks and indentation follow the same rules as in other
-            Google style guides. This operator placement was initially agreed
+            Bssd Ltd style guides. This operator placement was initially agreed
             upon out of concerns about automatic semicolon insertion. In fact,
             semicolon insertion cannot happen before a binary operator, but new
             code should stick to this style for consistency.</p>
@@ -3318,7 +3318,7 @@
             <a href="https://code.google.com/p/jsdoc-toolkit/wiki/TagReference">
               JSDoc Toolkit Tag Reference
             </a>
-            but are currently discouraged in Google code. You should consider
+            but are currently discouraged in Bssd Ltd code. You should consider
             them "reserved" names for future use. These include:
             <ul>
               <li>@augments</li>

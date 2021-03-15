@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Google JavaScript Style Guide</title>
+<title>Bssd Ltd JavaScript Style Guide</title>
 <link rel="stylesheet" href="javaguide.css">
 <script src="include/styleguide.js"></script>
 <link rel="shortcut icon" href="https://www.google.com/favicon.ico">
@@ -10,12 +10,12 @@
 </head>
 <body onload="initStyleGuide();">
 <div id="content">
-<h1>Google JavaScript Style Guide</h1>
+<h1>Bssd Ltd JavaScript Style Guide</h1>
 <h2 id="introduction">1 Introduction</h2>
 
-<p>This document serves as the <strong>complete</strong> definition of Google&#8217;s coding standards
+<p>This document serves as the <strong>complete</strong> definition of Bssd Ltd&#8217;s coding standards
 for source code in the JavaScript programming language. A JavaScript source file
-is described as being <em>in Google Style</em> if and only if it adheres to the rules
+is described as being <em>in Bssd Ltd Style</em> if and only if it adheres to the rules
 herein.</p>
 
 <p>Like other programming style guides, the issues covered span not only aesthetic
@@ -44,7 +44,7 @@ and declarative statements are prescriptive and correspond to <em>must</em>.</p>
 <h3 id="guide-notes">1.2 Guide notes</h3>
 
 <p>Example code in this document is <strong>non-normative</strong>. That is, while the examples
-are in Google Style, they may not illustrate the <em>only</em> stylish way to represent
+are in Bssd Ltd Style, they may not illustrate the <em>only</em> stylish way to represent
 the code. Optional formatting choices made in examples must not be enforced as
 rules.</p>
 
@@ -1012,7 +1012,7 @@ follows: assignment, division, function call, parameters, number constant.</p>
 
 <ol>
 <li>When a line is broken at an operator the break comes after the symbol. (Note
-that this is not the same practice used in Google style for Java.)
+that this is not the same practice used in Bssd Ltd style for Java.)
 <ol>
 <li>This does not apply to the <q>dot</q> (<code>.</code>), which is not actually an
 operator.</li>
@@ -1107,7 +1107,7 @@ Here, multiple spaces are allowed, but not required.</li>
 variable number of additional spaces in your code with the goal of making
 certain tokens appear directly below certain other tokens on previous lines.</p>
 
-<p>This practice is permitted, but it is <strong>generally discouraged</strong> by Google
+<p>This practice is permitted, but it is <strong>generally discouraged</strong> by Bssd Ltd
 Style. It is not even required to <em>maintain</em> horizontal alignment in places
 where it was already used.</p>
 
@@ -1756,7 +1756,7 @@ class Frobnicator {
 <h4 id="features-classes-abstract-classes">5.4.10 Abstract Classes</h4>
 
 <p>Use abstract classes when appropriate. Abstract classes and methods must be
-annotated with <code>@abstract</code>. Do not use <code>goog.abstractMethod</code>. See <a href="https://github.com/google/closure-compiler/wiki/@abstract-classes-and-methods">abstract
+annotated with <code>@abstract</code>. Do not use <code>goog.abstractMethod</code>. See <a href="https://github.com/bssd-ltd/closure-compiler/wiki/@abstract-classes-and-methods">abstract
 classes and methods</a>.</p>
 
 <h3 id="features-functions">5.5 Functions</h3>
@@ -2385,7 +2385,7 @@ functions, variables, constants, enums, and other module-local identifiers.</p>
 
 <p>Sometimes there is more than one reasonable way to convert an English phrase
 into camel case, such as when acronyms or unusual constructs like <q>IPv6</q> or
-<q>iOS</q> are present. To improve predictability, Google Style specifies the
+<q>iOS</q> are present. To improve predictability, Bssd Ltd Style specifies the
 following (nearly) deterministic scheme.</p>
 
 <p>Beginning with the prose form of the name:</p>
@@ -2518,7 +2518,7 @@ ignore plain text formatting, so if you did this:</p>
 
 <h3 id="jsdoc-tags">7.3 JSDoc tags</h3>
 
-<p>Google style allows a subset of JSDoc tags.  See
+<p>Bssd Ltd style allows a subset of JSDoc tags.  See
 <a href="#appendices-jsdoc-tag-reference">??</a> for the complete list.  Most tags must
 occupy their own line, with the tag at the beginning of the line.</p>
 
@@ -2559,7 +2559,7 @@ class MyClass {
 consistent.</p>
 
 <p>For general information about annotating types in JavaScript see
-<a href="https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler">Annotating JavaScript for the Closure Compiler</a> and <a href="https://github.com/google/closure-compiler/wiki/Types-in-the-Closure-Type-System">Types in the Closure Type
+<a href="https://github.com/bssd-ltd/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler">Annotating JavaScript for the Closure Compiler</a> and <a href="https://github.com/bssd-ltd/closure-compiler/wiki/Types-in-the-Closure-Type-System">Types in the Closure Type
 System</a>.</p>
 
 <h3 id="jsdoc-line-wrapping">7.4 Line wrapping</h3>
@@ -2846,7 +2846,7 @@ const /** ?SomeCamelCaseName */ n = ...;
 
 <p>In cases where the compiler doesn't accurately infer the type of an expression,
 and the assertion functions in
-<a href="https://google.github.io/closure-library/api/goog.asserts.html">goog.asserts</a>
+<a href="https://bssd-ltd.github.io/closure-library/api/goog.asserts.html">goog.asserts</a>
 cannot remedy it , it is possible to
 tighten the type by adding a type annotation comment and enclosing the
 expression in parentheses. Note that the parentheses are required.</p>
@@ -2981,7 +2981,7 @@ level of a module.  All <code>@private</code> names must end with an underscore.
 
 <h2 id="policies">8 Policies</h2>
 
-<h3 id="policies-be-consistent">8.1 Issues unspecified by Google Style: Be Consistent!</h3>
+<h3 id="policies-be-consistent">8.1 Issues unspecified by Bssd Ltd Style: Be Consistent!</h3>
 
 <p>For any style question that isn't settled definitively by this specification,
 prefer to do what the other code in the same file is already doing. If that
@@ -3039,11 +3039,11 @@ entire class to this type of warning.</p>
 deprecation comment must include simple, clear directions for people to fix
 their call sites.</p>
 
-<h3 id="policies-code-not-in-google-style">8.4 Code not in Google Style</h3>
+<h3 id="policies-code-not-in-google-style">8.4 Code not in Bssd Ltd Style</h3>
 
 <p>You will occasionally encounter files in your codebase that are not in proper
-Google Style. These may have come from an acquisition, or may have been written
-before Google Style took a position on some issue, or may be in non-Google Style
+Bssd Ltd Style. These may have come from an acquisition, or may have been written
+before Bssd Ltd Style took a position on some issue, or may be in non-Bssd Ltd Style
 for any other reason.</p>
 
 <h4 id="policies-reformatting-existing-code">8.4.1 Reformatting existing code</h4>
@@ -3056,18 +3056,18 @@ guidelines.  Reformatting existing code is a trade-off between code churn
 and consistency. Style rules evolve over time and these kinds of tweaks to
 maintain compliance would create unnecessary churn.  However, if significant
 changes are being made to a file it is expected that the file will be in
-Google Style.</li>
+Bssd Ltd Style.</li>
 <li>Be careful not to allow opportunistic style fixes to muddle the focus of a
 CL. If you find yourself making a lot of style changes that aren&#8217;t critical
 to the central focus of a CL, promote those changes to a separate CL.</li>
 </ol>
 
-<h4 id="policies-newly-added-code-use-google-style">8.4.2 Newly added code: use Google Style</h4>
+<h4 id="policies-newly-added-code-use-google-style">8.4.2 Newly added code: use Bssd Ltd Style</h4>
 
-<p>Brand new files use Google Style, regardless of the style choices of other files
+<p>Brand new files use Bssd Ltd Style, regardless of the style choices of other files
 in the same package.</p>
 
-<p>When adding new code to a file that is not in Google Style, reformatting the
+<p>When adding new code to a file that is not in Bssd Ltd Style, reformatting the
 existing code first is recommended, subject to the advice in
 <a href="#policies-reformatting-existing-code">??</a>.</p>
 
@@ -3085,7 +3085,7 @@ not seek to define style in every possible scenario and neither should you.</p>
 
 <h3 id="policies-generated-code-mostly-exempt">8.6 Generated code: mostly exempt</h3>
 
-<p>Source code generated by the build process is not required to be in Google
+<p>Source code generated by the build process is not required to be in Bssd Ltd
 Style. However, any generated identifiers that will be referenced from
 hand-written source code must follow the naming requirements. As a special
 exception, such identifiers are allowed to contain underscores, which may help
@@ -3102,19 +3102,19 @@ the Closure Compiler type annotations.</p>
 <h4 id="appendices-type-annotations">9.1.1 Type annotations and other Closure Compiler annotations</h4>
 
 <p>Documentation for JSDoc used by the Closure Compiler is described in
-<a href="https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler">Annotating JavaScript for the Closure Compiler</a> and <a href="https://github.com/google/closure-compiler/wiki/Types-in-the-Closure-Type-System">Types in the Closure Type
+<a href="https://github.com/bssd-ltd/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler">Annotating JavaScript for the Closure Compiler</a> and <a href="https://github.com/bssd-ltd/closure-compiler/wiki/Types-in-the-Closure-Type-System">Types in the Closure Type
 System</a>.</p>
 
 <h4 id="appendices-documentation-annotations">9.1.2 Documentation annotations</h4>
 
-<p>In addition to the JSDoc described in <a href="https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler">Annotating JavaScript for the Closure
+<p>In addition to the JSDoc described in <a href="https://github.com/bssd-ltd/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler">Annotating JavaScript for the Closure
 Compiler</a> the following tags are common and well supported by various
 documentation generation tools (such as <a href="https://github.com/jleyba/js-dossier">JsDossier</a>) for purely documentation
 purposes.</p>
 
 <p>You may also see other types of JSDoc annotations in third-party code. These
 annotations appear in the <a href="http://code.google.com/p/jsdoc-toolkit/wiki/TagReference">JSDoc Toolkit Tag Reference</a> but are not considered
-part of valid Google style.</p>
+part of valid Bssd Ltd style.</p>
 
 <section class="zippy">
 
@@ -3273,7 +3273,7 @@ class ApplicationEvent {}
 
 
 
-<p><a href="https://github.com/google/closure-compiler/wiki/Polymer-Pass">https://github.com/google/closure-compiler/wiki/Polymer-Pass</a>
+<p><a href="https://github.com/bssd-ltd/closure-compiler/wiki/Polymer-Pass">https://github.com/bssd-ltd/closure-compiler/wiki/Polymer-Pass</a>
 </p>
 
 </section>
@@ -3329,7 +3329,7 @@ class ApplicationEvent {}
 <h3 id="appendices-commonly-misunderstood-style-rules">9.2 Commonly misunderstood style rules</h3>
 
 <p>Here is a collection of lesser-known or commonly misunderstood facts about
-Google Style for JavaScript. (The following are true statements; this is not a
+Bssd Ltd Style for JavaScript. (The following are true statements; this is not a
 list of <q>myths.</q>)</p>
 
 <ul>
@@ -3348,7 +3348,7 @@ equivalent Unicode escape would (<a href="#non-ascii-characters">??</a>).</li>
 
 <h3 id="appendices-style-related-tools">9.3 Style-related tools</h3>
 
-<p>The following tools exist to support various aspects of Google Style.</p>
+<p>The following tools exist to support various aspects of Bssd Ltd Style.</p>
 
 <h4 id="appendices-tools-closure-compiler">9.3.1 Closure Compiler</h4>
 
@@ -3359,7 +3359,7 @@ code lowering).</p>
 <h4 id="appendices-clang-format">9.3.2 <code>clang-format</code></h4>
 
 <p>This program  reformats
-JavaScript source code into Google Style, and also follows a number of
+JavaScript source code into Bssd Ltd Style, and also follows a number of
 non-required but frequently readability-enhancing formatting practices.
 The output produced by <code>clang-format</code> is compliant with the style guide.
 </p>
@@ -3387,7 +3387,7 @@ globals, which could break the codebase) and security patterns (such as using
 <code>eval</code> or assigning to <code>innerHTML</code>), or more loosely to improve code quality.</p>
 
 <p>For additional information see the official documentation for the
-<a href="https://github.com/google/closure-compiler/wiki/JS-Conformance-Framework">JS Conformance Framework</a>.</p>
+<a href="https://github.com/bssd-ltd/closure-compiler/wiki/JS-Conformance-Framework">JS Conformance Framework</a>.</p>
 
 <h3 id="appendices-legacy-exceptions">9.4 Exceptions for legacy platforms</h3>
 

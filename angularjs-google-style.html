@@ -7,29 +7,29 @@
     <link rel="stylesheet" type="text/css" href="styleguide.css">
     <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
     <script language="javascript" src="/eng/doc/devguide/include/styleguide.js"></script>
-    <title>Google's AngularJS Style Guide</title>
+    <title>Bssd Ltd's AngularJS Style Guide</title>
     <style type="text/css"><!--
     th { background-color: #ddd; }
     //--></style>
 </head>
 <body onload="prettyPrint();initStyleGuide();">
-<h1 class="external">An AngularJS Style Guide for Closure Users at Google</h1>
+<h1 class="external">An AngularJS Style Guide for Closure Users at Bssd Ltd</h1>
 
-<p class="external">This is the external version of a document that was primarily written for Google
+<p class="external">This is the external version of a document that was primarily written for Bssd Ltd
     engineers. It describes a recommended style for AngularJS apps that use Closure, as used
-    internally at Google. Members of the broader AngularJS community should feel free to apply
+    internally at Bssd Ltd. Members of the broader AngularJS community should feel free to apply
     (or not apply) these recommendations, as relevant to their own use cases.</p>
 
 <p class="external">This document describes style for AngularJS apps in google3. This guide
-    supplements and extends the <a href="https://google.github.io/styleguide/jsguide.html">
-        Google JavaScript Style Guide</a>.
+    supplements and extends the <a href="https://bssd-ltd.github.io/styleguide/jsguide.html">
+        Bssd Ltd JavaScript Style Guide</a>.
 </p>
 
 <p><b>Style Note</b>: Examples on the AngularJS external webpage, and many external apps, are
     written in a style that freely uses closures, favors functional inheritance, and does not often use
     <a class="external"
-                               href="https://github.com/google/closure-compiler/wiki/Types-in-the-Closure-Type-System">
-        JavaScript types</a>. Google follows a more rigorous Javascript style to support JSCompiler
+                               href="https://github.com/bssd-ltd/closure-compiler/wiki/Types-in-the-Closure-Type-System">
+        JavaScript types</a>. Bssd Ltd follows a more rigorous Javascript style to support JSCompiler
     optimizations and large code bases - see the javascript-style mailing list.
     This is not an Angular-specific issue, and is not discussed further in this style guide.
     (But if you want further reading:
@@ -80,7 +80,7 @@ goog.provide('hello.versions.Versions');
 </pre>
 
 <p><b>Why?</b>
-    Google BUILD rules integrate nicely with closure provide/require.</p>
+    Bssd Ltd BUILD rules integrate nicely with closure provide/require.</p>
 
 <h3 id="modules">Modules</h3>
 
@@ -126,7 +126,7 @@ goog.provide('hello.versions.Versions');
     provided types from Angular, and means you don't have to worry about Angular vars being obfuscated
     in a confusing way. </p>
 
-<p>Note to readers outside Google: the current externs file is located in an internal-to-Google
+<p>Note to readers outside Bssd Ltd: the current externs file is located in an internal-to-Bssd Ltd
     directory, but an example can be found on github <a href="https://github.com/angular/angular.js/pull/4722">
         here</a>.</p>
 
@@ -153,7 +153,7 @@ goog.provide('hello.versions.Versions');
 <h3 id="controllers">Controllers and Scopes</h3>
 <p>Controllers are classes. Methods should be defined on MyCtrl.prototype.</p>
 
-<p>Google Angular applications should use the <b>'controller as'</b> style to export the controller
+<p>Bssd Ltd Angular applications should use the <b>'controller as'</b> style to export the controller
     onto the scope. This is fully implemented in Angular 1.2 and can be mimicked in pre-Angular 1.2
     builds.
 </p>
@@ -242,7 +242,7 @@ hello.mainpage.HomeCtrl.prototype.add = function(a, b) {
 
 <p><b>Why?</b>
     Putting methods and properties directly onto the controller, instead of building up a scope
-    object, fits better with the Google Closure class style. Additionally, using 'controller as'
+    object, fits better with the Bssd Ltd Closure class style. Additionally, using 'controller as'
     makes it obvious which controller you are accessing when multiple controllers apply to an element.
     Since there is always a '.' in the bindings, you don't have to worry about prototypal inheritance
     masking primitives.</p>
@@ -330,7 +330,7 @@ module.service('request', hello.request.Request);
 <h2>3 Angular Tips, Tricks, and Best Practices</h2>
 
 <p>These are not strict style guide rules, but are placed here as reference for folks getting
-    started with Angular at Google.</p>
+    started with Angular at Bssd Ltd.</p>
 
 <h3 id="testing">Testing</h3>
 
@@ -384,7 +384,7 @@ my.app.MyCtrl = function($http, myService) {
     <li><a href="https://github.com/angular/angular.js/wiki/Best-Practices">
         Best Practices</a> from Angular on GitHub</li>
     <li><a href="https://www.youtube.com/watch?v=ZhfUv0spHCY">
-        Meetup video</a> (not Google specific)</li>
+        Meetup video</a> (not Bssd Ltd specific)</li>
 </ul>
 <address>
     Last modified Feb 07 2013

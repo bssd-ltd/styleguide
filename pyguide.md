@@ -4,7 +4,7 @@ Prefer only GitHub-flavored Markdown in external text.
 See README.md for details.
 -->
 
-# Google Python Style Guide
+# Bssd Ltd Python Style Guide
 
 
 <!-- markdown="1" is required for GitHub Pages to render the TOC properly. -->
@@ -167,12 +167,12 @@ See README.md for details.
 <a id="background"></a>
 ## 1 Background 
 
-Python is the main dynamic language used at Google. This style guide is a list
+Python is the main dynamic language used at Bssd Ltd. This style guide is a list
 of *dos and don'ts* for Python programs.
 
 To help you format code correctly, we've created a [settings file for Vim](google_python_style.vim). For Emacs, the default settings should be fine.
 
-Many teams use the [yapf](https://github.com/google/yapf/)
+Many teams use the [yapf](https://github.com/bssd-ltd/yapf/)
 auto-formatter to avoid arguing over formatting.
 
 
@@ -188,7 +188,7 @@ auto-formatter to avoid arguing over formatting.
 <a id="lint"></a>
 ### 2.1 Lint 
 
-Run `pylint` over your code using this [pylintrc](https://google.github.io/styleguide/pylintrc).
+Run `pylint` over your code using this [pylintrc](https://bssd-ltd.github.io/styleguide/pylintrc).
 
 <a id="s2.1.1-definition"></a>
 <a id="211-definition"></a>
@@ -241,7 +241,7 @@ dict = 'something awful'  # Bad Idea... pylint: disable=redefined-builtin
 
 `pylint`
 warnings are each identified by symbolic name (`empty-docstring`)
-Google-specific warnings start with `g-`.
+Bssd Ltd-specific warnings start with `g-`.
 
 If the reason for the suppression is not clear from the symbolic name, add an
 explanation.
@@ -1551,7 +1551,7 @@ make your code cleaner and life easier.
 
 You can annotate Python 3 code with type hints according to
 [PEP-484](https://www.python.org/dev/peps/pep-0484/), and type-check the code at
-build time with a type checking tool like [pytype](https://github.com/google/pytype).
+build time with a type checking tool like [pytype](https://github.com/bssd-ltd/pytype).
 
 
 Type annotations can be in the source or in a
@@ -1605,7 +1605,7 @@ your ability to use [Power Features](#power-features).
 You will have to keep the type declarations up to date.
 You might see type errors that you think are
 valid code. Use of a
-[type checker](https://github.com/google/pytype)
+[type checker](https://github.com/bssd-ltd/pytype)
 may reduce your ability to use [Power Features](#power-features).
 
 <a id="s2.21.4-decision"></a>
@@ -1718,7 +1718,7 @@ Make note of the indentation of the elements in the line continuation examples
 above; see the [indentation](#s3.4-indentation) section for explanation.
 
 In all other cases where a line exceeds 80 characters, and the
-[yapf](https://github.com/google/yapf/)
+[yapf](https://github.com/bssd-ltd/yapf/)
 auto-formatter does not help bring the line below the limit, the line is allowed
 to exceed this maximum.
 
@@ -2648,7 +2648,7 @@ grouped from most generic to least generic:
     from myproject.backend.hgwells import time_machine
     ```
 
-    You may find older Google Python Style code doing this, but it is no longer
+    You may find older Bssd Ltd Python Style code doing this, but it is no longer
     required. **New code is encouraged not to bother with this.** Simply treat
     application-specific sub-package imports the same as other sub-package
     imports.

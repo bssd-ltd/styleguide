@@ -1,6 +1,6 @@
 <?xml version = '1.0'?>
 <?xml-stylesheet type="text/xsl" href="styleguide.xsl"?>
-<GUIDE title="Google Vimscript Style Guide">
+<GUIDE title="Bssd Ltd Vimscript Style Guide">
   <p class="revision">
 
     Revision 1.1
@@ -175,7 +175,7 @@
     </STYLEPOINT>
     <STYLEPOINT title="Boilerplate">
       <SUMMARY>
-        Use <a href="https://github.com/google/maktaba">maktaba</a>.
+        Use <a href="https://github.com/bssd-ltd/maktaba">maktaba</a>.
       </SUMMARY>
       <BODY>
         <p>

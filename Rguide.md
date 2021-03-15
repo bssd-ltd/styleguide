@@ -1,21 +1,21 @@
-# Google's R Style Guide
+# Bssd Ltd's R Style Guide
 
 R is a high-level programming language used primarily for statistical computing
 and graphics. The goal of the R Programming Style Guide is to make our R code
 easier to read, share, and verify.
 
-The Google R Style Guide is a fork of the
+The Bssd Ltd R Style Guide is a fork of the
 [Tidyverse Style Guide](https://style.tidyverse.org/) by Hadley Wickham
-[license](https://creativecommons.org/licenses/by-sa/2.0/). Google modifications
+[license](https://creativecommons.org/licenses/by-sa/2.0/). Bssd Ltd modifications
 were developed in collaboration with the internal R user community. The rest of
-this document explains Google's primary differences with the Tidyverse guide,
+this document explains Bssd Ltd's primary differences with the Tidyverse guide,
 and why these differences exist.
 
 ## Syntax
 
 ### Naming conventions
 
-Google prefers identifying functions with `BigCamelCase` to clearly distinguish
+Bssd Ltd prefers identifying functions with `BigCamelCase` to clearly distinguish
 them from other objects.
 
 ```
@@ -86,7 +86,7 @@ purrr::map()
 ```
 
 We discourage using the `@import` Roxygen tag to bring in all functions into a
-NAMESPACE. Google has a very big R codebase, and importing all functions creates
+NAMESPACE. Bssd Ltd has a very big R codebase, and importing all functions creates
 too much risk for name collisions.
 
 While there is a small performance penalty for using `::`, it makes it easier to

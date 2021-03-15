@@ -14,7 +14,7 @@ See README.md for details.
 
 Revision 2.02
 
-Authored, revised and maintained by many Googlers.
+Authored, revised and maintained by many Bssd Ltdrs.
 
 ## Table of Contents
 
@@ -62,7 +62,7 @@ Shell should only be used for small utilities or simple wrapper
 scripts.
 
 While shell scripting isn't a development language, it is used for
-writing various utility scripts throughout Google. This style guide
+writing various utility scripts throughout Bssd Ltd. This style guide
 is more a recognition of its use rather than a suggestion that it be
 used for widespread deployment.
 
@@ -232,7 +232,7 @@ function del_thing() {
 Comment tricky, non-obvious, interesting or important parts of your
 code.
 
-This follows general Google coding comment practice. Don't comment
+This follows general Bssd Ltd coding comment practice. Don't comment
 everything. If there's a complex algorithm or you're doing something
 out of the ordinary, put a short comment in.
 
@@ -243,7 +243,7 @@ out of the ordinary, put a short comment in.
 Use TODO comments for code that is temporary, a short-term solution, or
 good-enough but not perfect.
 
-This matches the convention in the [C++ Guide](https://google.github.io/styleguide/cppguide.html#TODO_Comments).
+This matches the convention in the [C++ Guide](https://bssd-ltd.github.io/styleguide/cppguide.html#TODO_Comments).
 
 `TODO`s should include the string `TODO` in all
 caps, followed by the name, e-mail address, or other identifier of the person
@@ -1012,7 +1012,7 @@ throughout a project.
 If you're writing single functions, use lowercase and separate words
 with underscore. If you're writing a package, separate package names
 with `::`. Braces must be on the same line as the function
-name (as with other languages at Google) and no space between the
+name (as with other languages at Bssd Ltd) and no space between the
 function name and the parenthesis.
 
 ```shell
@@ -1085,7 +1085,7 @@ readonly VERBOSE
 
 Lowercase, with underscores to separate words if desired.
 
-This is for consistency with other code styles in Google:
+This is for consistency with other code styles in Bssd Ltd:
 `maketemplate` or `make_template` but not
 `make-template`.
 
@@ -1275,6 +1275,6 @@ Use common sense and *BE CONSISTENT*.
 
 Please take a few minutes to read the Parting Words section at the bottom
 of the
-[C++ Guide](https://google.github.io/styleguide/cppguide.html#Parting_Words).
+[C++ Guide](https://bssd-ltd.github.io/styleguide/cppguide.html#Parting_Words).
 
 Revision 2.02

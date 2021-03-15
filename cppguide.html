@@ -2,20 +2,20 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Google C++ Style Guide</title>
+<title>Bssd Ltd C++ Style Guide</title>
 <link rel="stylesheet" href="include/styleguide.css">
 <script src="include/styleguide.js"></script>
 <link rel="shortcut icon" href="https://www.google.com/favicon.ico">
 </head>
 <body onload="initStyleGuide();">
 <div id="content">
-<h1>Google C++ Style Guide</h1>
+<h1>Bssd Ltd C++ Style Guide</h1>
 <div class="horizontal_toc" id="tocDiv"></div>
 
 <h2 id="Background" class="ignoreLink">Background</h2>
 
 <p>C++ is one of the main development languages  used by
-many of Google's open-source projects. As every C++
+many of Bssd Ltd's open-source projects. As every C++
 programmer knows, the language has many powerful features, but
 this power brings with it complexity, which in turn can make
 code more bug-prone and harder to read and maintain.</p>
@@ -33,7 +33,7 @@ just source file formatting.</p>
 
 <p>
 Most open-source projects developed by
-Google conform to the requirements in this guide.
+Bssd Ltd conform to the requirements in this guide.
 </p>
 
 
@@ -147,7 +147,7 @@ document.</dd>
 <p>The intent of this document is to provide maximal guidance with
 reasonable restriction. As always, common sense and good taste should
 prevail. By this we specifically refer to the established conventions
-of the entire Google C++ community, not just your personal preferences
+of the entire Bssd Ltd C++ community, not just your personal preferences
 or those of your team. Be skeptical about and reluctant to use
 clever or unusual constructs: the absence of a prohibition is not the
 same as a license to proceed.  Use your judgment, and if you are
@@ -1677,7 +1677,7 @@ reasons, we allow data members of a test fixture class defined in a .cc file to
 be <code>protected</code> when using
 
 
-<a href="https://github.com/google/googletest">Google
+<a href="https://github.com/bssd-ltd/googletest">Bssd Ltd
 Test</a>).
 If a test fixture class is defined outside of the .cc file it is used in, for example in a .h file,
 make data members <code>private</code>.</p>
@@ -1932,7 +1932,7 @@ doubt, use overloads.</p>
   <a href="#Template_metaprogramming">discouraged in most cases</a>.</p>
 
 
-<h2 id="Google-Specific_Magic">Google-Specific Magic</h2>
+<h2 id="Bssd Ltd-Specific_Magic">Bssd Ltd-Specific Magic</h2>
 
 
 
@@ -2291,11 +2291,11 @@ implications on all dependent code. If exceptions can be
 propagated beyond a new project, it also becomes
 problematic to integrate the new project into existing
 exception-free code. Because most existing C++ code at
-Google is not prepared to deal with exceptions, it is
+Bssd Ltd is not prepared to deal with exceptions, it is
 comparatively difficult to adopt new code that generates
 exceptions.</p>
 
-<p>Given that Google's existing code is not
+<p>Given that Bssd Ltd's existing code is not
 exception-tolerant, the costs of using exceptions are
 somewhat greater than the costs in a new project. The
 conversion process would be slow and error-prone. We
@@ -2306,9 +2306,9 @@ a significant burden. </p>
 <p>Our advice against using exceptions is not predicated
 on philosophical or moral grounds, but practical ones.
  Because we'd like to use our open-source
-projects at Google and it's difficult to do so if those
+projects at Bssd Ltd and it's difficult to do so if those
 projects use exceptions, we need to advise against
-exceptions in Google open-source projects as well.
+exceptions in Bssd Ltd open-source projects as well.
 Things would probably be different if we had to do it all
 over again from scratch.</p>
 
@@ -2378,7 +2378,7 @@ with
 your project leads.</p>
 
 <p>Prefer unconditional <code>noexcept</code> if exceptions are
-completely disabled (i.e., most Google C++ environments).
+completely disabled (i.e., most Bssd Ltd C++ environments).
 Otherwise, use conditional <code>noexcept</code> specifiers
 with simple conditions, in ways that evaluate false only in
 the few cases where the function could potentially throw.
@@ -2580,7 +2580,7 @@ implementation details.</p>
 <p class="definition"></p>
 <p>Streams are the standard I/O abstraction in C++, as
 exemplified by the standard header <code>&lt;iostream&gt;</code>.
-They are widely used in Google code, mostly for debug logging
+They are widely used in Bssd Ltd code, mostly for debug logging
 and test diagnostics.</p>
 
 <p class="pros"></p>
@@ -3648,7 +3648,7 @@ computation in the type domain.</p>
 <p>Template metaprogramming allows extremely flexible interfaces that
 are type safe and high performance. Facilities like
 
-<a href="https://github.com/google/googletest">Google Test</a>,
+<a href="https://github.com/bssd-ltd/googletest">Bssd Ltd Test</a>,
 <code>std::tuple</code>, <code>std::function</code>, and
 Boost.Spirit would be impossible without it.</p>
 
@@ -5425,7 +5425,7 @@ the end of the lines:</p>
 
 <p>Note that when the code wraps in this example, both of
 the <code>&amp;&amp;</code> logical AND operators are at
-the end of the line. This is more common in Google code,
+the end of the line. This is more common in Bssd Ltd code,
 though wrapping all operators at the beginning of the
 line is also allowed. Feel free to insert extra
 parentheses judiciously because they can be very helpful
@@ -5813,7 +5813,7 @@ style:</p>
 
 <ul>
   <li>Do not use Hungarian notation (for example, naming
-  an integer <code>iNum</code>). Use the Google naming
+  an integer <code>iNum</code>). Use the Bssd Ltd naming
   conventions, including the <code>.cc</code> extension
   for source files.</li>
 
@@ -5831,7 +5831,7 @@ style:</p>
   warnings as errors.</li>
 
   <li>Do not use <code>#pragma once</code>; instead use
-  the standard Google include guards. The path in the
+  the standard Bssd Ltd include guards. The path in the
   include guards should be relative to the top of your
   project tree.</li>
 

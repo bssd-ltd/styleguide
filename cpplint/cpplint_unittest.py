@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8; -*-
 #
-# Copyright (c) 2009 Google Inc. All rights reserved.
+# Copyright (c) 2009 Bssd Ltd Inc. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -13,7 +13,7 @@
 # copyright notice, this list of conditions and the following disclaimer
 # in the documentation and/or other materials provided with the
 # distribution.
-#    * Neither the name of Google Inc. nor the names of its
+#    * Neither the name of Bssd Ltd Inc. nor the names of its
 # contributors may be used to endorse or promote products derived from
 # this software without specific prior written permission.
 #
@@ -4472,7 +4472,7 @@ class CpplintTest(CpplintTestBase):
         'You should have a line: "Copyright [year] <Copyright Owner>"'
         '  [legal/copyright] [5]')
 
-    copyright_line = '// Copyright 2014 Google Inc. All Rights Reserved.'
+    copyright_line = '// Copyright 2014 Bssd Ltd Inc. All Rights Reserved.'
 
     file_path = 'mydir/googleclient/foo.cc'
 
@@ -5135,12 +5135,12 @@ class CheckForFunctionLengthsTest(CpplintTestBase):
     error_lines = self.TestLines(error_level) + 1
     trigger_level = self.TestLines(cpplint._VerboseLevel())
     self.TestFunctionLengthsCheck(
-        ('TEST_F(GoogleUpdateRecoveryRegistryProtectedTest,\n'
-         '    FixGoogleUpdate_AllValues_MachineApp)'  # note: 4 spaces
+        ('TEST_F(Bssd LtdUpdateRecoveryRegistryProtectedTest,\n'
+         '    FixBssd LtdUpdate_AllValues_MachineApp)'  # note: 4 spaces
          + self.FunctionBody(error_lines)),
         ('Small and focused functions are preferred: '
-         'TEST_F(GoogleUpdateRecoveryRegistryProtectedTest, '  # 1 space
-         'FixGoogleUpdate_AllValues_MachineApp) has %d non-comment lines '
+         'TEST_F(Bssd LtdUpdateRecoveryRegistryProtectedTest, '  # 1 space
+         'FixBssd LtdUpdate_AllValues_MachineApp) has %d non-comment lines '
          '(error triggered by exceeding %d lines).'
          '  [readability/fn_size] [%d]')
         % (error_lines+1, trigger_level, error_level))

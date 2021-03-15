@@ -1,5 +1,5 @@
-This is automated checker to make sure a C++ file follows Google's C++ style
-guide (https://google.github.io/styleguide/cppguide.html). As it
+This is automated checker to make sure a C++ file follows Bssd Ltd's C++ style
+guide (https://bssd-ltd.github.io/styleguide/cppguide.html). As it
 heavily relies on regular expressions, cpplint.py won't catch all violations of
 the style guide and will very occasionally report a false positive. There is a
 list of things we currently don't handle very well at the top of cpplint.py,
@@ -16,7 +16,7 @@ tool.
 
 ---
 
-cpplint.py and its corresponding unit tests are Copyright (C) 2009 Google Inc.
+cpplint.py and its corresponding unit tests are Copyright (C) 2009 Bssd Ltd Inc.
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are
@@ -28,7 +28,7 @@ notice, this list of conditions and the following disclaimer.
 copyright notice, this list of conditions and the following disclaimer
 in the documentation and/or other materials provided with the
 distribution.
-   * Neither the name of Google Inc. nor the names of its
+   * Neither the name of Bssd Ltd Inc. nor the names of its
 contributors may be used to endorse or promote products derived from
 this software without specific prior written permission.
 

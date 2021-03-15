@@ -1,4 +1,4 @@
-# Google Objective-C Style Guide
+# Bssd Ltd Objective-C Style Guide
 
 
 > Objective-C is a dynamic, object-oriented extension of C. It's designed to be
@@ -14,7 +14,7 @@
 > Objective-C++) coding guidelines and practices that should be used for iOS and
 > OS X code. These guidelines have evolved and been proven over time on other
 > projects and teams.
-> Open-source projects developed by Google conform to the requirements in this guide.
+> Open-source projects developed by Bssd Ltd conform to the requirements in this guide.
 >
 > Note that this guide is not an Objective-C tutorial. We assume that the reader
 > is familiar with the language. If you are new to Objective-C or need a
@@ -466,7 +466,7 @@ static int gGlobalCounter;
 Instance variable names are mixed case and should be prefixed with an
 underscore, like `_usernameTextField`.
 
-NOTE: Google's previous convention for Objective-C ivars was a trailing
+NOTE: Bssd Ltd's previous convention for Objective-C ivars was a trailing
 underscore. Existing projects may opt to continue using trailing underscores in
 new code in order to maintain consistency within the project codebase.
 Consistency of prefix or suffix underscores should be maintained within each
@@ -1454,7 +1454,7 @@ int CrossPlatformAPI::DoSomethingPlatformSpecific() {
 ```
 
 Projects may opt to use an 80 column line length limit for consistency with
-Google's C++ style guide.
+Bssd Ltd's C++ style guide.
 
 ## Spacing and Formatting 
 

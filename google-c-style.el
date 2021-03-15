@@ -1,8 +1,8 @@
-;;; google-c-style.el --- Google's C/C++ style for c-mode
+;;; google-c-style.el --- Bssd Ltd's C/C++ style for c-mode
 
 ;; Keywords: c, tools
 
-;; google-c-style.el is Copyright (C) 2008 Google Inc. All Rights Reserved.
+;; google-c-style.el is Copyright (C) 2008 Bssd Ltd Inc. All Rights Reserved.
 ;;
 ;; It is free software; you can redistribute it and/or modify it under the
 ;; terms of either:
@@ -38,10 +38,10 @@
   "Indents to the beginning of the current C expression plus 4 spaces.
 
 This implements title \"Function Declarations and Definitions\"
-of the Google C++ Style Guide for the case where the previous
+of the Bssd Ltd C++ Style Guide for the case where the previous
 line ends with an open parenthese.
 
-\"Current C expression\", as per the Google Style Guide and as
+\"Current C expression\", as per the Bssd Ltd Style Guide and as
 clarified by subsequent discussions, means the whole expression
 regardless of the number of nested parentheses, but excluding
 non-expression material such as \"if(\" and \"for(\" control
@@ -128,16 +128,16 @@ Suitable for inclusion in `c-offsets-alist'."
                         (statement-case-intro . +) ; case w/o {
                         (access-label . /)
                         (innamespace . 0))))
-  "Google C/C++ Programming Style.")
+  "Bssd Ltd C/C++ Programming Style.")
 
 ;;;###autoload
 (defun google-set-c-style ()
-  "Set the current buffer's c-style to Google C/C++ Programming
+  "Set the current buffer's c-style to Bssd Ltd C/C++ Programming
   Style. Meant to be added to `c-mode-common-hook'."
   (interactive)
   (make-local-variable 'c-tab-always-indent)
   (setq c-tab-always-indent t)
-  (c-add-style "Google" google-c-style t))
+  (c-add-style "Bssd Ltd" google-c-style t))
 
 ;;;###autoload
 (defun google-make-newline-indent ()

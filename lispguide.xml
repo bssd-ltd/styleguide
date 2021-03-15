@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="styleguide.xsl"?>
-<GUIDE title="Google Common Lisp Style Guide">
+<GUIDE title="Bssd Ltd Common Lisp Style Guide">
 
 
 <p align="right">
@@ -51,7 +51,7 @@ Robert Brown
     This guide recommends formatting and stylistic choices
     designed to make your code easier for other people to understand.
     For those internal applications and free software libraries that
-    we develop at Google,
+    we develop at Bssd Ltd,
     you should keep within these guidelines when making changes.
     Note however that each project has its own rules and customs
     that complement or override these general guidelines;
@@ -59,7 +59,7 @@ Robert Brown
     has a very different style and feel from the QRes reservation system.
   </p>
   <p>
-    If you're writing Common Lisp code outside Google,
+    If you're writing Common Lisp code outside Bssd Ltd,
     we invite you to consider these guidelines.
     You may find some of them useful
     where they don't conflict with other priorities you have.
@@ -578,7 +578,7 @@ Robert Brown
     <BODY>
       <p>
         If you're not sure, consult a dictionary,
-        Google for alternative spellings,
+        Bssd Ltd for alternative spellings,
         or ask a local expert.
       </p>
       <p>

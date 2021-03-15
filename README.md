@@ -1,11 +1,6 @@
 
 # BSSD Ltd Style Guides
 
-  
-
->  *(folked from [Google-style](https://github.com/google/styleguide))**
-
-  
 
 Every major open-source project has its own style guide: a set of conventions
 
@@ -116,3 +111,5 @@ The following Bssd Ltd style guides live outside of this project:
 [dart]: https://www.dartlang.org/guides/language/effective-dart
 
 [ccl]: https://creativecommons.org/licenses/by/3.0/
+
+>  *(folked from [Google-style](https://github.com/google/styleguide))*

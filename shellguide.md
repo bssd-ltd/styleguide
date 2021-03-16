@@ -243,7 +243,7 @@ out of the ordinary, put a short comment in.
 Use TODO comments for code that is temporary, a short-term solution, or
 good-enough but not perfect.
 
-This matches the convention in the [C++ Guide](https://bssd-ltd.github.io/styleguide/cppguide.html#TODO_Comments).
+This matches the convention in the [C++ Guide](https://opensource.bssd.vn/styleguide/cppguide.html#TODO_Comments).
 
 `TODO`s should include the string `TODO` in all
 caps, followed by the name, e-mail address, or other identifier of the person
@@ -1275,6 +1275,6 @@ Use common sense and *BE CONSISTENT*.
 
 Please take a few minutes to read the Parting Words section at the bottom
 of the
-[C++ Guide](https://bssd-ltd.github.io/styleguide/cppguide.html#Parting_Words).
+[C++ Guide](https://opensource.bssd.vn/styleguide/cppguide.html#Parting_Words).
 
 Revision 2.02

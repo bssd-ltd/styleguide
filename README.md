@@ -35,23 +35,23 @@ The following Bssd Ltd style guides live outside of this project:
 
 <a rel="license" href="https://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/3.0/88x31.png" /></a>
 
-[cpp]: https://bssd-ltd.github.io/styleguide/cppguide.html
-[csharp]: https://bssd-ltd.github.io/styleguide/csharp-style.html
-[swift]: https://bssd-ltd.github.io/swift/
+[cpp]: https://opensource.bssd.vn/styleguide/cppguide.html
+[csharp]: https://opensource.bssd.vn/styleguide/csharp-style.html
+[swift]: https://opensource.bssd.vn/swift/
 [objc]: objcguide.md
-[java]: https://bssd-ltd.github.io/styleguide/javaguide.html
-[py]: https://bssd-ltd.github.io/styleguide/pyguide.html
-[r]: https://bssd-ltd.github.io/styleguide/Rguide.html
-[sh]: https://bssd-ltd.github.io/styleguide/shellguide.html
-[htmlcss]: https://bssd-ltd.github.io/styleguide/htmlcssguide.html
-[js]: https://bssd-ltd.github.io/styleguide/jsguide.html
-[ts]: https://bssd-ltd.github.io/styleguide/tsguide.html
-[angular]: https://bssd-ltd.github.io/styleguide/angularjs-google-style.html
-[cl]: https://bssd-ltd.github.io/styleguide/lispguide.xml
-[vim]: https://bssd-ltd.github.io/styleguide/vimscriptguide.xml
+[java]: https://opensource.bssd.vn/styleguide/javaguide.html
+[py]: https://opensource.bssd.vn/styleguide/pyguide.html
+[r]: https://opensource.bssd.vn/styleguide/Rguide.html
+[sh]: https://opensource.bssd.vn/styleguide/shellguide.html
+[htmlcss]: https://opensource.bssd.vn/styleguide/htmlcssguide.html
+[js]: https://opensource.bssd.vn/styleguide/jsguide.html
+[ts]: https://opensource.bssd.vn/styleguide/tsguide.html
+[angular]: https://opensource.bssd.vn/styleguide/angularjs-google-style.html
+[cl]: https://opensource.bssd.vn/styleguide/lispguide.xml
+[vim]: https://opensource.bssd.vn/styleguide/vimscriptguide.xml
 [cpplint]: https://github.com/bssd-ltd/styleguide/tree/gh-pages/cpplint
 [emacs]: https://raw.githubusercontent.com/google/styleguide/gh-pages/google-c-style.el
-[xml]: https://bssd-ltd.github.io/styleguide/xmlstyle.html
+[xml]: https://opensource.bssd.vn/styleguide/xmlstyle.html
 [go]: https://golang.org/wiki/CodeReviewComments
 [dart]: https://www.dartlang.org/guides/language/effective-dart
 [ccl]: https://creativecommons.org/licenses/by/3.0/

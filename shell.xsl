@@ -23,8 +23,8 @@ xmlns:fn="http://www.w3.org/2005/xpath-functions">
           <HEAD>
               <TITLE><xsl:value-of select="@title"/></TITLE>
               <META http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-              <META http-equiv="refresh" content="0;url=https://bssd-ltd.github.io/styleguide/shellguide.html" />
-              <LINK rel="canonical" href="https://bssd-ltd.github.io/styleguide/shellguide.html" />
+              <META http-equiv="refresh" content="0;url=https://opensource.bssd.vn/styleguide/shellguide.html" />
+              <LINK rel="canonical" href="https://opensource.bssd.vn/styleguide/shellguide.html" />
               <LINK HREF="https://www.google.com/favicon.ico" type="image/x-icon"
                     rel="shortcut icon"/>
               <LINK HREF="styleguide.css"

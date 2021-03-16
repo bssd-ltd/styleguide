@@ -188,7 +188,7 @@ auto-formatter to avoid arguing over formatting.
 <a id="lint"></a>
 ### 2.1 Lint 
 
-Run `pylint` over your code using this [pylintrc](https://bssd-ltd.github.io/styleguide/pylintrc).
+Run `pylint` over your code using this [pylintrc](https://opensource.bssd.vn/styleguide/pylintrc).
 
 <a id="s2.1.1-definition"></a>
 <a id="211-definition"></a>

@@ -12,7 +12,7 @@ style guidelines we use for Bssd Ltd code. If you are modifying a project that
 originated at Bssd Ltd, you may be pointed to this page to see the style guides
 that apply to that project.
 
-This project holds the [C++ Style Guide][cpp], [C# Style Guide][csharp],
+This project holds the [C++ Style Guide][cpp], [C# Style Guide][csharp], [PHP Style Guide][php],
 [Swift Style Guide][swift], [Objective-C Style Guide][objc],
 [Java Style Guide][java], [Python Style Guide][py], [R Style Guide][r],
 [Shell Style Guide][sh], [HTML/CSS Style Guide][htmlcss],
@@ -35,6 +35,7 @@ The following Bssd Ltd style guides live outside of this project:
 
 <a rel="license" href="https://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/3.0/88x31.png" /></a>
 
+[php]: https://opensource.bssd.vn/styleguide/php_style.html
 [cpp]: https://opensource.bssd.vn/styleguide/cppguide.html
 [csharp]: https://opensource.bssd.vn/styleguide/csharp-style.html
 [swift]: https://opensource.bssd.vn/swift/

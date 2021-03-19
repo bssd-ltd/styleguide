@@ -1,12 +1,20 @@
-<h1 id="php-style-guide">PHP Style Guide</h1>
+
+    <html>
+      <head>
+        <title>PHP</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+      </head>
+      <body>
+        <div id='content'>
+    <h1 id="php-style-guide">PHP Style Guide</h1>
 <p>All rules and guidelines in this document apply to PHP files unless otherwise noted. References to PHP/HTML files can be interpreted as files that primarily contain HTML, but use PHP for templating purposes.</p>
 <blockquote>
-<p>The keywords &quot;MUST&quot;, &quot;MUST NOT&quot;, &quot;REQUIRED&quot;, &quot;SHALL&quot;, &quot;SHALL NOT&quot;, &quot;SHOULD&quot;, &quot;SHOULD NOT&quot;, &quot;RECOMMENDED&quot;,  &quot;MAY&quot;, and &quot;OPTIONAL&quot; in this document are to be interpreted as described in <a href="http://www.ietf.org/rfc/rfc2119.txt">RFC 2119</a>.</p>
+  <p>The keywords "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED",  "MAY", and "OPTIONAL" in this document are to be interpreted as described in <a href="http://www.ietf.org/rfc/rfc2119.txt">RFC 2119</a>.</p>
 </blockquote>
 <p>Most sections are broken up into two parts:</p>
 <ol>
 <li>Overview of all rules with a quick example</li>
-<li>Each rule called out with examples of do&#39;s and don&#39;ts</li>
+<li>Each rule called out with examples of do's and don'ts</li>
 </ol>
 <p><strong>Icon Legend</strong>:</p>
 <p><code>·</code> Space, <code>⇥</code> Tab, <code>↵</code> Enter/Return</p>
@@ -15,26 +23,20 @@
 <ol>
 <li><a href="#1-files"><strong>Files</strong></a><ol>
 <li><a href="#file-format">File Format</a></li>
-<li><a href="#filename">Filename</a></li>
-</ol>
-</li>
+<li><a href="#filename">Filename</a></li></ol></li>
 <li><a href="#2-skeleton"><strong>Skeleton</strong></a></li>
 <li><a href="#3-php-tags"><strong>PHP Tags</strong></a><ol>
 <li><a href="#1-open-tag">Open Tag</a></li>
 <li><a href="#2-close-tag">Close Tag</a></li>
 <li><a href="#3-openclose-tag">Open/Close Tag</a></li>
 <li><a href="#4-short-open-tag">Short Open Tag</a></li>
-<li><a href="#5-short-echo-tag">Short Echo Tag</a></li>
-</ol>
-</li>
+<li><a href="#5-short-echo-tag">Short Echo Tag</a></li></ol></li>
 <li><a href="#4-end-of-file"><strong>End of File</strong></a></li>
 <li><a href="#5-namespaces"><strong>Namespaces</strong></a><ol>
 <li><a href="#1-namespace-declaration">Namespace Declaration</a></li>
 <li><a href="#2-namespace-name">Namespace Name</a></li>
 <li><a href="#3-multiple-namespaces">Multiple Namespaces</a></li>
-<li><a href="#4-magic-constant">Magic Constant</a></li>
-</ol>
-</li>
+<li><a href="#4-magic-constant">Magic Constant</a></li></ol></li>
 <li><a href="#6-comments"><strong>Comments</strong></a><ol>
 <li><a href="#1-single-line-comments">Single-line Comments</a></li>
 <li><a href="#2-multi-line-comments">Multi-line Comments</a></li>
@@ -43,15 +45,11 @@
 <li><a href="#5-comments">Comments</a></li>
 <li><a href="#6-blocks-of-code">Blocks of Code</a></li>
 <li><a href="#7-ambiguous-numbers">Ambiguous Numbers</a></li>
-<li><a href="#8-external-variables">External Variables</a></li>
-</ol>
-</li>
+<li><a href="#8-external-variables">External Variables</a></li></ol></li>
 <li><a href="#7-includes"><strong>Includes</strong></a><ol>
 <li><a href="#1-includerequire-once">Include/Require Once</a></li>
 <li><a href="#2-parenthesis">Parenthesis</a></li>
-<li><a href="#3-purpose-of-include">Purpose of Include</a></li>
-</ol>
-</li>
+<li><a href="#3-purpose-of-include">Purpose of Include</a></li></ol></li>
 <li><a href="#8-formatting"><strong>Formatting</strong></a><ol>
 <li><a href="#1-line-length">Line Length</a></li>
 <li><a href="#2-line-indentation">Line Indentation</a></li>
@@ -67,26 +65,20 @@
 <li><a href="#12-unary-operators">Unary Operators</a></li>
 <li><a href="#13-concatenation-period">Concatenation Period</a></li>
 <li><a href="#14-single-quotes">Single Quotes</a></li>
-<li><a href="#15-double-quotes">Double Quotes</a></li>
-</ol>
-</li>
+<li><a href="#15-double-quotes">Double Quotes</a></li></ol></li>
 <li><a href="#9-functions"><strong>Functions</strong></a><ol>
 <li><a href="#1-function-name">Function Name</a></li>
 <li><a href="#2-function-prefix">Function Prefix</a></li>
 <li><a href="#3-function-call">Function Call</a></li>
 <li><a href="#4-function-arguments">Function Arguments</a></li>
 <li><a href="#5-function-declaration">Function Declaration</a></li>
-<li><a href="#6-function-return">Function Return</a></li>
-</ol>
-</li>
+<li><a href="#6-function-return">Function Return</a></li></ol></li>
 <li><a href="#10-control-structures"><strong>Control Structures</strong></a><ol>
 <li><a href="#1-if-elseif-else">If, Elseif, Else</a></li>
 <li><a href="#2-switch-case">Switch, Case</a></li>
 <li><a href="#3-while-do-while">While, Do While</a></li>
 <li><a href="#4-for-foreach">For, Foreach</a></li>
-<li><a href="#5-try-catch">Try, Catch</a></li>
-</ol>
-</li>
+<li><a href="#5-try-catch">Try, Catch</a></li></ol></li>
 <li><a href="#11-classes"><strong>Classes</strong></a><ol>
 <li><a href="#1-class-file">Class File</a></li>
 <li><a href="#2-class-namespace">Class Namespace</a></li>
@@ -95,17 +87,13 @@
 <li><a href="#5-class-definition">Class Definition</a></li>
 <li><a href="#6-class-properties">Class Properties</a></li>
 <li><a href="#7-class-methods">Class Methods</a></li>
-<li><a href="#8-class-instance">Class Instance</a></li>
-</ol>
-</li>
+<li><a href="#8-class-instance">Class Instance</a></li></ol></li>
 <li><a href="#12-best-practices"><strong>Best Practices</strong></a><ol>
 <li><a href="#1-variable-initialization">Variable Initialization</a></li>
 <li><a href="#2-initializationdeclaration-order">Initialization/Declaration Order</a></li>
 <li><a href="#3-globals">Globals</a></li>
 <li><a href="#4-explicit-expressions">Explicit Expressions</a></li>
-<li><a href="#5-e_strict-reporting">E_STRICT Reporting</a></li>
-</ol>
-</li>
+<li><a href="#5-e_strict-reporting">E_STRICT Reporting</a></li></ol></li>
 </ol>
 <!-- ---------------------------------------------------------------------- -->
 <h2 id="1-files">1. Files</h2>
@@ -113,24 +101,16 @@
 <h4 id="file-format">File Format</h4>
 <ol>
 <li><strong>Character encoding</strong> MUST be set to UTF-8 without BOM<ul>
-<li>Sublime.app &rarr; <code>File</code> &#8250; <code>Save with Encoding</code> &#8250; <code>UTF-8</code></li>
-</ul>
-</li>
+<li>Sublime.app &rarr; <code>File</code> &#8250; <code>Save with Encoding</code> &#8250; <code>UTF-8</code></li></ul></li>
 <li><strong>Line endings</strong> MUST be set to Unix (LF)<ul>
-<li>Sublime.app &rarr; <code>View</code> &#8250; <code>Line Endings</code> &#8250; <code>Unix</code></li>
-</ul>
-</li>
+<li>Sublime.app &rarr; <code>View</code> &#8250; <code>Line Endings</code> &#8250; <code>Unix</code></li></ul></li>
 </ol>
 <h4 id="filename">Filename</h4>
 <ol>
 <li><strong>Letters</strong> MUST be all lowercase<ul>
-<li>e.g. <code>autoloader.php</code></li>
-</ul>
-</li>
+<li>e.g. <code>autoloader.php</code></li></ul></li>
 <li><strong>Words</strong> MUST be separated with a hyphen<ul>
-<li>e.g. <code>app-config.php</code></li>
-</ul>
-</li>
+<li>e.g. <code>app-config.php</code></li></ul></li>
 </ol>
 <p>&#9650; <a href="#table-of-contents">Table of Contents</a></p>
 <!-- ---------------------------------------------------------------------- -->
@@ -153,61 +133,47 @@
 // EOF
 
 </pre>
-
 <p>&#9650; <a href="#table-of-contents">Table of Contents</a></p>
 <!-- ---------------------------------------------------------------------- -->
 <h2 id="3-php-tags">3. PHP Tags</h2>
 <p>This section describes the use of PHP tags in PHP and PHP/HTML files.</p>
 <ol>
 <li><a href="#1-open-tag"><strong>Open tag</strong></a> MUST be on its own line and MUST be followed by a blank line<ul>
-<li>i.e. <code>&lt;?php</code> <code>↵</code> <code>↵</code> <code>...</code></li>
-</ul>
-</li>
+<li>i.e. <code>&lt;?php</code> <code>↵</code> <code>↵</code> <code>...</code></li></ul></li>
 <li><a href="#2-close-tag"><strong>Close tag</strong></a> MUST NOT be used in PHP files<ul>
-<li>i.e. no <code>?&gt;</code></li>
-</ul>
-</li>
+<li>i.e. no <code>?&gt;</code></li></ul></li>
 <li><a href="#3-openclose-tag"><strong>Open/close tag</strong></a> MUST be on one line in PHP/HTML files<ul>
-<li>i.e. <code>&lt;?php ... ?&gt;</code></li>
-</ul>
-</li>
+<li>i.e. <code>&lt;?php ... ?&gt;</code></li></ul></li>
 <li><a href="#4-short-open-tag"><strong>Short open tag</strong></a> MUST NOT be used<ul>
-<li>i.e. <code>&lt;?</code> &rarr; <code>&lt;?php</code></li>
-</ul>
-</li>
+<li>i.e. <code>&lt;?</code> &rarr; <code>&lt;?php</code></li></ul></li>
 <li><a href="#5-short-echo-tag"><strong>Short echo tag</strong></a> SHOULD be used in PHP/HTML files<ul>
-<li>i.e. <code>&lt;?php echo</code> &rarr; <code>&lt;?=</code></li>
-</ul>
-</li>
+<li>i.e. <code>&lt;?php echo</code> &rarr; <code>&lt;?=</code></li></ul></li>
 </ol>
 <p>&#9650; <a href="#table-of-contents">Table of Contents</a></p>
 <!-- ------------------------------ -->
 <h3 id="1-open-tag">1. Open Tag</h3>
 <p>Open tag MUST be on its own line and MUST be followed by a blank line.</p>
-<h4 id="-10006-incorrect">&#10006; Incorrect</h4>
+<h4 id="10006-incorrect">&#10006; Incorrect</h4>
 <pre lang=php>
 &lt;?php print_welcome_message();
 </pre>
-
 <p>&#8627; Incorrect because <code>&lt;?php</code> is not on its own line.</p>
 <pre lang=php>
 &lt;?php
 print_welcome_message();
 </pre>
-
 <p>&#8627; Incorrect because <code>&lt;?php</code> is not followed by a blank line.</p>
-<h4 id="-10004-correct">&#10004; Correct</h4>
+<h4 id="10004-correct">&#10004; Correct</h4>
 <pre lang=php>
 &lt;?php
 
 print_welcome_message();
 </pre>
-
 <p>&#9650; <a href="#3-php-tags">PHP Tags</a></p>
 <!-- ------------------------------ -->
 <h3 id="2-close-tag">2. Close Tag</h3>
 <p>Close tag MUST NOT be used in PHP files.</p>
-<h4 id="-10006-incorrect">&#10006; Incorrect</h4>
+<h4 id="10006-incorrect-1">&#10006; Incorrect</h4>
 <pre lang=php>
 &lt;?php
 
@@ -215,20 +181,18 @@ print_welcome_message();
 
 ?&gt;
 </pre>
-
 <p>&#8627; Incorrect because <code>?&gt;</code> was used.</p>
-<h4 id="-10004-correct">&#10004; Correct</h4>
+<h4 id="10004-correct-1">&#10004; Correct</h4>
 <pre lang=php>
 &lt;?php
 
 print_welcome_message();
 </pre>
-
 <p>&#9650; <a href="#3-php-tags">PHP Tags</a></p>
 <!-- ------------------------------ -->
-<h3 id="3-open-close-tag">3. Open/Close Tag</h3>
+<h3 id="3-openclose-tag">3. Open/Close Tag</h3>
 <p>Open/close tag MUST be on one line in PHP/HTML files.</p>
-<h4 id="-10006-incorrect">&#10006; Incorrect</h4>
+<h4 id="10006-incorrect-2">&#10006; Incorrect</h4>
 <pre lang=html>
 &lt;div&gt;
     &lt;h1&gt;&lt;?php
@@ -236,34 +200,30 @@ print_welcome_message();
     ?&gt;&lt;/h1&gt;
 &lt;/div&gt;
 </pre>
-
 <p>&#8627; Incorrect because <code>&lt;?php</code> and <code>?&gt;</code> are not on one line.</p>
-<h4 id="-10004-correct">&#10004; Correct</h4>
+<h4 id="10004-correct-2">&#10004; Correct</h4>
 <pre lang=html>
 &lt;div&gt;
     &lt;h1&gt;&lt;?php print_welcome_message(); ?&gt;&lt;/h1&gt;
 &lt;/div&gt;
 </pre>
-
 <p>&#9650; <a href="#3-php-tags">PHP Tags</a></p>
 <!-- ------------------------------ -->
 <h3 id="4-short-open-tag">4. Short Open Tag</h3>
 <p>Short open tag MUST NOT be used.</p>
-<h4 id="-10006-incorrect">&#10006; Incorrect</h4>
+<h4 id="10006-incorrect-3">&#10006; Incorrect</h4>
 <pre lang=php>
 &lt;?
 
 print_welcome_message();
 </pre>
-
 <p>&#8627; Incorrect because <code>&lt;?</code> was used instead of <code>&lt;?php</code>.</p>
-<h4 id="-10004-correct">&#10004; Correct</h4>
+<h4 id="10004-correct-3">&#10004; Correct</h4>
 <pre lang=php>
 &lt;?php
 
 print_welcome_message();
 </pre>
-
 <p>&#9650; <a href="#3-php-tags">PHP Tags</a></p>
 <!-- ------------------------------ -->
 <h3 id="5-short-echo-tag">5. Short Echo Tag</h3>
@@ -274,15 +234,13 @@ print_welcome_message();
     &lt;p&gt;&lt;?php echo get_welcome_message(); ?&gt;&lt;/p&gt;
 &lt;/div&gt;
 </pre>
-
 <p>&#8627; Acceptable, but <code>&lt;?=</code> should be used over <code>&lt;?php echo</code> when possible.</p>
-<h4 id="-10004-preferred">&#10004; Preferred</h4>
+<h4 id="10004-preferred">&#10004; Preferred</h4>
 <pre lang=html>
 &lt;div&gt;
     &lt;p&gt;&lt;?= get_welcome_message(); ?&gt;&lt;/p&gt;
 &lt;/div&gt;
 </pre>
-
 <p>&#9650; <a href="#3-php-tags">PHP Tags</a></p>
 <!-- ---------------------------------------------------------------------- -->
 <h2 id="4-end-of-file">4. End of File</h2>
@@ -290,32 +248,24 @@ print_welcome_message();
 <p>End-of-file comment:</p>
 <ul>
 <li>MUST be included at the end of a file<ul>
-<li>i.e. <code>// EOF</code></li>
-</ul>
-</li>
+<li>i.e. <code>// EOF</code></li></ul></li>
 <li>MUST be on its own line<ul>
-<li>i.e. <code>↵</code> <code>// EOF</code></li>
-</ul>
-</li>
+<li>i.e. <code>↵</code> <code>// EOF</code></li></ul></li>
 <li>MUST be surrounded by blank lines<ul>
-<li>i.e. <code>...</code> <code>↵</code> <code>↵</code> <code>// EOF</code> <code>↵</code></li>
+<li>i.e. <code>...</code> <code>↵</code> <code>↵</code> <code>// EOF</code> <code>↵</code></li></ul></li>
 </ul>
-</li>
-</ul>
-<h4 id="-10006-incorrect">&#10006; Incorrect</h4>
+<h4 id="10006-incorrect-4">&#10006; Incorrect</h4>
 <pre lang=php>
 &lt;?php
 
 print_welcome_message();
 </pre>
-
 <p>&#8627; Incorrect because <code>// EOF</code> is missing.</p>
 <pre lang=php>
 &lt;?php
 
 print_welcome_message(); // EOF
 </pre>
-
 <p>&#8627; Incorrect because <code>// EOF</code> is not on its own line.</p>
 <pre lang=php>
 &lt;?php
@@ -323,9 +273,8 @@ print_welcome_message(); // EOF
 print_welcome_message();
 // EOF
 </pre>
-
 <p>&#8627; Incorrect because <code>// EOF</code> is not surrounded by blank lines.</p>
-<h4 id="-10004-correct">&#10004; Correct</h4>
+<h4 id="10004-correct-4">&#10004; Correct</h4>
 <pre lang=php>
 &lt;?php
 
@@ -334,34 +283,25 @@ print_welcome_message();
 // EOF
 
 </pre>
-
 <p>&#9650; <a href="#table-of-contents">Table of Contents</a></p>
 <!-- ---------------------------------------------------------------------- -->
 <h2 id="5-namespaces">5. Namespaces</h2>
 <p>This section describes how to use one or more namespaces and their naming convention.</p>
 <ol>
 <li><a href="#1-namespace-declaration"><strong>Namespace declaration</strong></a> MUST be the first statement and MUST be followed by a blank line<ul>
-<li>i.e. <code>&lt;?php</code> <code>↵</code> <code>↵</code> <code>namespace MyCompany;</code> <code>↵</code> <code>↵</code> <code>...</code></li>
-</ul>
-</li>
+<li>i.e. <code>&lt;?php</code> <code>↵</code> <code>↵</code> <code>namespace MyCompany;</code> <code>↵</code> <code>↵</code> <code>...</code></li></ul></li>
 <li><a href="#2-namespace-name"><strong>Namespace name</strong></a> MUST start with a capital letter and MUST be camelcase<ul>
-<li>e.g. <code>namespace MyCompany;</code></li>
-</ul>
-</li>
+<li>e.g. <code>namespace MyCompany;</code></li></ul></li>
 <li><a href="#3-multiple-namespaces"><strong>Multiple namespaces</strong></a> MUST use the curly brace syntax<ul>
-<li>i.e. <code>namespace MyCompany { ... }</code></li>
-</ul>
-</li>
+<li>i.e. <code>namespace MyCompany { ... }</code></li></ul></li>
 <li><a href="#4-magic-constant"><strong>Magic constant</strong></a> SHOULD be used to reference the namespace name<ul>
-<li>i.e. <code>__NAMESPACE__</code></li>
-</ul>
-</li>
+<li>i.e. <code>__NAMESPACE__</code></li></ul></li>
 </ol>
 <p>&#9650; <a href="#table-of-contents">Table of Contents</a></p>
 <!-- ------------------------------ -->
 <h3 id="1-namespace-declaration">1. Namespace Declaration</h3>
 <p>Namespace declaration MUST be the first statement and MUST be followed by a blank line.</p>
-<h4 id="-10006-incorrect">&#10006; Incorrect</h4>
+<h4 id="10006-incorrect-5">&#10006; Incorrect</h4>
 <pre lang=php>
 &lt;?php
 
@@ -372,7 +312,6 @@ namespace MyCompany;
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because <code>namespace MyCompany;</code> is not the first statement.</p>
 <pre lang=php>
 &lt;?php
@@ -383,9 +322,8 @@ print_welcome_message();
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because <code>namespace MyCompany;</code> is not followed by a blank line.</p>
-<h4 id="-10004-correct">&#10004; Correct</h4>
+<h4 id="10004-correct-5">&#10004; Correct</h4>
 <pre lang=php>
 &lt;?php
 
@@ -396,12 +334,11 @@ print_welcome_message();
 // EOF
 
 </pre>
-
 <p>&#9650; <a href="#5-namespaces">Namespaces</a></p>
 <!-- ------------------------------ -->
 <h3 id="2-namespace-name">2. Namespace Name</h3>
 <p>Namespace name MUST start with a capital letter and MUST be camelcase.</p>
-<h4 id="-10006-incorrect">&#10006; Incorrect</h4>
+<h4 id="10006-incorrect-6">&#10006; Incorrect</h4>
 <pre lang=php>
 &lt;?php
 
@@ -410,7 +347,6 @@ namespace myCompany;
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because <code>myCompany</code> does not start with a capital letter.</p>
 <pre lang=php>
 &lt;?php
@@ -420,9 +356,8 @@ namespace MyCOMPANY;
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because <code>MyCOMPANY</code> is not written in camelcase.</p>
-<h4 id="-10004-correct">&#10004; Correct</h4>
+<h4 id="10004-correct-6">&#10004; Correct</h4>
 <pre lang=php>
 &lt;?php
 
@@ -431,12 +366,11 @@ namespace MyCompany;
 // EOF
 
 </pre>
-
 <p>&#9650; <a href="#5-namespaces">Namespaces</a></p>
 <!-- ------------------------------ -->
 <h3 id="3-multiple-namespaces">3. Multiple Namespaces</h3>
 <p>Multiple namespaces MUST use the curly brace syntax.</p>
-<h4 id="-10006-incorrect">&#10006; Incorrect</h4>
+<h4 id="10006-incorrect-7">&#10006; Incorrect</h4>
 <pre lang=php>
 &lt;?php
 
@@ -447,9 +381,8 @@ namespace MyCompany\View;
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because there are two namespaces and the curly brace syntax was not used.</p>
-<h4 id="-10004-correct">&#10004; Correct</h4>
+<h4 id="10004-correct-7">&#10004; Correct</h4>
 <pre lang=php>
 &lt;?php
 
@@ -464,12 +397,11 @@ namespace MyCompany\View {
 // EOF
 
 </pre>
-
 <p>&#9650; <a href="#5-namespaces">Namespaces</a></p>
 <!-- ------------------------------ -->
 <h3 id="4-magic-constant">4. Magic Constant</h3>
 <p>Magic constant SHOULD be used to reference the namespace name.</p>
-<h4 id="-acceptable">~ Acceptable</h4>
+<h4 id="-acceptable-1">~ Acceptable</h4>
 <pre lang=php>
 &lt;?php
 
@@ -484,9 +416,8 @@ namespace MyCompany\View {
 // EOF
 
 </pre>
-
 <p>&#8627; Acceptable, but using <code>__NAMESPACE__</code> instead of <code>MyCompany\View</code> is preferred.</p>
-<h4 id="-10004-preferred">&#10004; Preferred</h4>
+<h4 id="10004-preferred-1">&#10004; Preferred</h4>
 <pre lang=php>
 &lt;?php
 
@@ -501,50 +432,33 @@ namespace MyCompany\View {
 // EOF
 
 </pre>
-
 <p>&#9650; <a href="#5-namespaces">Namespaces</a></p>
 <!-- ---------------------------------------------------------------------- -->
 <h2 id="6-comments">6. Comments</h2>
 <p>This section describes how comments should be formatted and used.</p>
 <ol>
 <li><strong><a href="#1-single-line-comments">Single-line comments</a></strong> MUST use two forward slashes<ul>
-<li>e.g. <code>// My comment</code></li>
-</ul>
-</li>
+<li>e.g. <code>// My comment</code></li></ul></li>
 <li><strong><a href="#2-multi-line-comments">Multi-line comments</a></strong> MUST use the block format<ul>
-<li>i.e. <code>/**</code> <code>↵</code> <code>* My comment</code> <code>↵</code> <code>*/</code></li>
-</ul>
-</li>
+<li>i.e. <code>/**</code> <code>↵</code> <code>* My comment</code> <code>↵</code> <code>*/</code></li></ul></li>
 <li><strong><a href="#3-header-comments">Header comments</a></strong> SHOULD use the block format<ul>
-<li>i.e. <code>/**</code> <code>↵</code> <code>* Name of code section</code> <code>↵</code> <code>*/</code></li>
-</ul>
-</li>
+<li>i.e. <code>/**</code> <code>↵</code> <code>* Name of code section</code> <code>↵</code> <code>*/</code></li></ul></li>
 <li><strong><a href="#4-divider-comments">Divider comments</a></strong> SHOULD use the block format with asterisks in between<ul>
-<li>i.e. <code>/**</code> <code>75 asterisks</code> <code>*/</code></li>
-</ul>
-</li>
+<li>i.e. <code>/**</code> <code>75 asterisks</code> <code>*/</code></li></ul></li>
 <li><strong><a href="#5-comments">Comments</a></strong> MUST be on their own line<ul>
-<li>i.e. <code>↵</code> <code>// My comment</code></li>
-</ul>
-</li>
+<li>i.e. <code>↵</code> <code>// My comment</code></li></ul></li>
 <li><strong><a href="#6-blocks-of-code">Blocks of code</a></strong> SHOULD be explained or summarized<ul>
-<li>e.g. <code>// Compare user accounts from export against expired accounts in system</code></li>
-</ul>
-</li>
+<li>e.g. <code>// Compare user accounts from export against expired accounts in system</code></li></ul></li>
 <li><strong><a href="#7-ambiguous-numbers">Ambiguous numbers</a></strong> MUST be clarified<ul>
-<li>e.g. <code>// 1,000 processable records per hour API limit</code></li>
-</ul>
-</li>
+<li>e.g. <code>// 1,000 processable records per hour API limit</code></li></ul></li>
 <li><strong><a href="#8-external-variables">External variables</a></strong> MUST be clarified<ul>
-<li>e.g. <code>// Database object included in file.php</code></li>
-</ul>
-</li>
+<li>e.g. <code>// Database object included in file.php</code></li></ul></li>
 </ol>
 <p>&#9650; <a href="#table-of-contents">Table of Contents</a></p>
 <!-- ------------------------------ -->
 <h3 id="1-single-line-comments">1. Single-line Comments</h3>
 <p>Single-line comments MUST use two forward slashes.</p>
-<h4 id="-10006-incorrect">&#10006; Incorrect</h4>
+<h4 id="10006-incorrect-8">&#10006; Incorrect</h4>
 <pre lang=php>
 &lt;?php
 
@@ -553,9 +467,8 @@ namespace MyCompany\View {
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because it uses <code>/*</code> and <code>*/</code> for a single-line comment.</p>
-<h4 id="-10004-correct">&#10004; Correct</h4>
+<h4 id="10004-correct-8">&#10004; Correct</h4>
 <pre lang=php>
 &lt;?php
 
@@ -564,12 +477,11 @@ namespace MyCompany\View {
 // EOF
 
 </pre>
-
 <p>&#9650; <a href="#6-comments">Comments</a></p>
 <!-- ------------------------------ -->
 <h3 id="2-multi-line-comments">2. Multi-line Comments</h3>
 <p>Multi-line comments MUST use the block format.</p>
-<h4 id="-10006-incorrect">&#10006; Incorrect</h4>
+<h4 id="10006-incorrect-9">&#10006; Incorrect</h4>
 <pre lang=php>
 &lt;?php
 
@@ -580,9 +492,8 @@ namespace MyCompany\View {
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because it uses <code>//</code> for a multi-line comment.</p>
-<h4 id="-10004-correct">&#10004; Correct</h4>
+<h4 id="10004-correct-9">&#10004; Correct</h4>
 <pre lang=php>
 &lt;?php
 
@@ -595,7 +506,6 @@ namespace MyCompany\View {
 // EOF
 
 </pre>
-
 <p>&#9650; <a href="#6-comments">Comments</a></p>
 <!-- ------------------------------ -->
 <h3 id="3-header-comments">3. Header Comments</h3>
@@ -614,12 +524,11 @@ define('SETTING_THREE', '');
 // EOF
 
 </pre>
-
 <p>&#9650; <a href="#6-comments">Comments</a></p>
 <!-- ------------------------------ -->
 <h3 id="4-divider-comments">4. Divider Comments</h3>
 <p>Divider comments SHOULD use the block format with 75 asterisks in between.</p>
-<h4 id="-10006-incorrect">&#10006; Incorrect</h4>
+<h4 id="10006-incorrect-10">&#10006; Incorrect</h4>
 <pre lang=php>
 &lt;?php
 
@@ -628,7 +537,6 @@ define('SETTING_THREE', '');
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because it uses <code>#</code> instead of <code>*</code>.</p>
 <pre lang=php>
 &lt;?php
@@ -638,9 +546,8 @@ define('SETTING_THREE', '');
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because it uses 10 instead of 75 <code>*</code>.</p>
-<h4 id="-10004-correct">&#10004; Correct</h4>
+<h4 id="10004-correct-10">&#10004; Correct</h4>
 <pre lang=php>
 &lt;?php
 
@@ -654,12 +561,11 @@ define('SETTING_THREE', '');
 // EOF
 
 </pre>
-
 <p>&#9650; <a href="#6-comments">Comments</a></p>
 <!-- ------------------------------ -->
 <h3 id="5-comments">5. Comments</h3>
 <p>Comment MUST be on their own line.</p>
-<h4 id="-10006-incorrect">&#10006; Incorrect</h4>
+<h4 id="10006-incorrect-11">&#10006; Incorrect</h4>
 <pre lang=php>
 &lt;?php
 
@@ -668,9 +574,8 @@ print_welcome_message(); // Prints welcome message
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because <code>// Prints welcome message</code> is not on its own line.</p>
-<h4 id="-10004-correct">&#10004; Correct</h4>
+<h4 id="10004-correct-11">&#10004; Correct</h4>
 <pre lang=php>
 &lt;?php
 
@@ -680,12 +585,11 @@ print_welcome_message();
 // EOF
 
 </pre>
-
 <p>&#9650; <a href="#6-comments">Comments</a></p>
 <!-- ------------------------------ -->
 <h3 id="6-blocks-of-code">6. Blocks of Code</h3>
 <p>Blocks of code SHOULD be explained or summarized.</p>
-<h4 id="-acceptable">~ Acceptable</h4>
+<h4 id="-acceptable-2">~ Acceptable</h4>
 <pre lang=php>
 &lt;?php
 
@@ -708,9 +612,8 @@ foreach ($users as $user) {
 // EOF
 
 </pre>
-
 <p>&#8627; Acceptable, but block of code should be explained or summarized.</p>
-<h4 id="-10004-preferred">&#10004; Preferred</h4>
+<h4 id="10004-preferred-2">&#10004; Preferred</h4>
 <pre lang=php>
 &lt;?php
 
@@ -738,12 +641,11 @@ foreach ($users as $user) {
 // EOF
 
 </pre>
-
 <p>&#9650; <a href="#6-comments">Comments</a></p>
 <!-- ------------------------------ -->
 <h3 id="7-ambiguous-numbers">7. Ambiguous Numbers</h3>
 <p>Ambiguous numbers MUST be clarified.</p>
-<h4 id="-10006-incorrect">&#10006; Incorrect</h4>
+<h4 id="10006-incorrect-12">&#10006; Incorrect</h4>
 <pre lang=php>
 &lt;?php
 
@@ -754,9 +656,8 @@ while ($expr && $x &lt; 1000) {
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because <code>1000</code> is not clarified.</p>
-<h4 id="-10004-correct">&#10004; Correct</h4>
+<h4 id="10004-correct-12">&#10004; Correct</h4>
 <pre lang=php>
 &lt;?php
 
@@ -768,12 +669,11 @@ while ($expr && $x &lt; 1000) {
 // EOF
 
 </pre>
-
 <p>&#9650; <a href="#6-comments">Comments</a></p>
 <!-- ------------------------------ -->
 <h3 id="8-external-variables">8. External Variables</h3>
 <p>External variables MUST be clarified.</p>
-<h4 id="-10006-incorrect">&#10006; Incorrect</h4>
+<h4 id="10006-incorrect-13">&#10006; Incorrect</h4>
 <pre lang=php>
 &lt;?php
 
@@ -788,9 +688,8 @@ foreach($users as $user) {
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because source of <code>$users</code> is not clear.</p>
-<h4 id="-10004-correct">&#10004; Correct</h4>
+<h4 id="10004-correct-13">&#10004; Correct</h4>
 <pre lang=php>
 &lt;?php
 
@@ -806,30 +705,23 @@ foreach($users as $user) {
 // EOF
 
 </pre>
-
 <p>&#9650; <a href="#6-comments">Comments</a></p>
 <!-- ---------------------------------------------------------------------- -->
 <h2 id="7-includes">7. Includes</h2>
 <p>This section describes the format for including and requiring files.</p>
 <ol>
 <li><a href="#1-includerequire-once"><strong>Include/require once</strong></a> SHOULD be used<ul>
-<li>i.e. <code>include</code> &rarr; <code>include_once</code>, <code>require</code> &rarr; <code>require_once</code></li>
-</ul>
-</li>
+<li>i.e. <code>include</code> &rarr; <code>include_once</code>, <code>require</code> &rarr; <code>require_once</code></li></ul></li>
 <li><a href="#2-parenthesis"><strong>Parenthesis</strong></a> MUST NOT be used<ul>
-<li>e.g. <code>include_once(&#39;file.php&#39;);</code> &rarr; <code>include_once &#39;file.php&#39;;</code></li>
-</ul>
-</li>
+<li>e.g. <code>include_once('file.php');</code> &rarr; <code>include_once 'file.php';</code></li></ul></li>
 <li><a href="#3-purpose-of-include"><strong>Purpose of include</strong></a> MUST be documented with a comment<ul>
-<li>e.g. <code>// Provides WordPress environment</code> <code>↵</code> <code>require_once &#39;wp-load.php&#39;;</code></li>
-</ul>
-</li>
+<li>e.g. <code>// Provides WordPress environment</code> <code>↵</code> <code>require_once 'wp-load.php';</code></li></ul></li>
 </ol>
 <p>&#9650; <a href="#table-of-contents">Table of Contents</a></p>
 <!-- ------------------------------ -->
-<h3 id="1-include-require-once">1. Include/Require Once</h3>
+<h3 id="1-includerequire-once">1. Include/Require Once</h3>
 <p>Include/require once SHOULD be used.</p>
-<h4 id="-acceptable">~ Acceptable</h4>
+<h4 id="-acceptable-3">~ Acceptable</h4>
 <pre lang=php>
 &lt;?php
 
@@ -839,9 +731,8 @@ require 'some-other-file.php';
 // EOF
 
 </pre>
-
 <p>&#8627; Acceptable, but <code>_once</code> should be appended to <code>include</code> and <code>require</code> if possible.</p>
-<h4 id="-10004-preferred">&#10004; Preferred</h4>
+<h4 id="10004-preferred-3">&#10004; Preferred</h4>
 <pre lang=php>
 &lt;?php
 
@@ -851,12 +742,11 @@ require_once 'some-other-file.php';
 // EOF
 
 </pre>
-
 <p>&#9650; <a href="#7-includes">Includes</a></p>
 <!-- ------------------------------ -->
 <h3 id="2-parenthesis">2. Parenthesis</h3>
 <p>Parenthesis MUST NOT be used.</p>
-<h4 id="-10006-incorrect">&#10006; Incorrect</h4>
+<h4 id="10006-incorrect-14">&#10006; Incorrect</h4>
 <pre lang=php>
 &lt;?php
 
@@ -866,9 +756,8 @@ require_once('some-other-file.php');
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because <code>include_once</code> and <code>require_once</code> are used with parenthesis.</p>
-<h4 id="-10004-correct">&#10004; Correct</h4>
+<h4 id="10004-correct-14">&#10004; Correct</h4>
 <pre lang=php>
 &lt;?php
 
@@ -878,12 +767,11 @@ require_once 'some-other-file.php';
 // EOF
 
 </pre>
-
 <p>&#9650; <a href="#7-includes">Includes</a></p>
 <!-- ------------------------------ -->
 <h3 id="3-purpose-of-include">3. Purpose of Include</h3>
 <p>Purpose of include MUST be documented with a comment.</p>
-<h4 id="-10006-incorrect">&#10006; Incorrect</h4>
+<h4 id="10006-incorrect-15">&#10006; Incorrect</h4>
 <pre lang=php>
 &lt;?php
 
@@ -892,9 +780,8 @@ require_once 'some-file.php';
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because there is no comment as to what <code>some-file.php</code> does or provides.</p>
-<h4 id="-10004-correct">&#10004; Correct</h4>
+<h4 id="10004-correct-15">&#10004; Correct</h4>
 <pre lang=php>
 &lt;?php
 
@@ -904,78 +791,47 @@ require_once 'some-file.php';
 // EOF
 
 </pre>
-
 <p>&#9650; <a href="#7-includes">Includes</a></p>
 <!-- ---------------------------------------------------------------------- -->
 <h2 id="8-formatting">8. Formatting</h2>
 <p>This section outline various, general formatting rules related to whitespace and text.</p>
 <ol>
 <li><a href="#1-line-length"><strong>Line length</strong></a> MUST NOT exceed 80 characters, unless it is text<ul>
-<li>i.e. <code>|---- 80+ chars ----|</code> &rarr; refactor expression and/or break list values</li>
-</ul>
-</li>
+<li>i.e. <code>|---- 80+ chars ----|</code> &rarr; refactor expression and/or break list values</li></ul></li>
 <li><a href="#2-line-indentation"><strong>Line indentation</strong></a> MUST be accomplished using tabs<ul>
-<li>i.e. <code>function func() {</code> <code>↵</code> <code>⇥</code> <code>...</code> <code>↵</code> <code>}</code></li>
-</ul>
-</li>
+<li>i.e. <code>function func() {</code> <code>↵</code> <code>⇥</code> <code>...</code> <code>↵</code> <code>}</code></li></ul></li>
 <li><a href="#3-blank-lines"><strong>Blank lines</strong></a> SHOULD be added between logical blocks of code<ul>
-<li>i.e. <code>...</code> <code>↵</code> <code>↵</code> <code>...</code></li>
-</ul>
-</li>
+<li>i.e. <code>...</code> <code>↵</code> <code>↵</code> <code>...</code></li></ul></li>
 <li><a href="#4-text-alignment"><strong>Text alignment</strong></a> MUST be accomplished using spaces<ul>
-<li>i.e. <code>$var</code> <code>·</code> <code>·</code> <code>·</code> <code>= ...;</code></li>
-</ul>
-</li>
+<li>i.e. <code>$var</code> <code>·</code> <code>·</code> <code>·</code> <code>= ...;</code></li></ul></li>
 <li><a href="#5-trailing-whitespace"><strong>Trailing whitespace</strong></a> MUST NOT be present after statements or serial comma break or on blank lines<ul>
-<li>i.e. no <code>...</code> <code>·</code> <code>·</code> <code>↵</code> <code>·</code> <code>↵</code> <code>...</code></li>
-</ul>
-</li>
+<li>i.e. no <code>...</code> <code>·</code> <code>·</code> <code>↵</code> <code>·</code> <code>↵</code> <code>...</code></li></ul></li>
 <li><a href="#6-keywords"><strong>Keywords</strong></a> MUST be all lowercase<ul>
-<li>e.g. <code>false</code>, <code>true</code>, <code>null</code>, etc.</li>
-</ul>
-</li>
+<li>e.g. <code>false</code>, <code>true</code>, <code>null</code>, etc.</li></ul></li>
 <li><a href="#7-variables"><strong>Variables</strong></a> MUST be all lowercase and words MUST be separated by an underscore<ul>
-<li>e.g. <code>$welcome_message</code></li>
-</ul>
-</li>
+<li>e.g. <code>$welcome_message</code></li></ul></li>
 <li><a href="#8-global-variables"><strong>Global variables</strong></a> MUST be declared one variable per line and MUST be indented after the first<ul>
-<li>e.g. <code>global $var1,</code> <code>↵</code> <code>⇥</code> <code>$var2;</code></li>
-</ul>
-</li>
+<li>e.g. <code>global $var1,</code> <code>↵</code> <code>⇥</code> <code>$var2;</code></li></ul></li>
 <li><a href="#9-constants"><strong>Constants</strong></a> MUST be all uppercase and words MUST be separated by an underscore<ul>
-<li>e.g. <code>WELCOME_MESSAGE</code></li>
-</ul>
-</li>
+<li>e.g. <code>WELCOME_MESSAGE</code></li></ul></li>
 <li><a href="#10-statements"><strong>Statements</strong></a> MUST be placed on their own line and MUST end with a semicolon<ul>
-<li>e.g. <code>welcome_message();</code></li>
-</ul>
-</li>
+<li>e.g. <code>welcome_message();</code></li></ul></li>
 <li><a href="#11-operators"><strong>Operators</strong></a> MUST be surrounded by a space<ul>
-<li>e.g. <code>$total = 15 + 7;</code>, <code>$var .= &#39;&#39;;</code></li>
-</ul>
-</li>
+<li>e.g. <code>$total = 15 + 7;</code>, <code>$var .= '';</code></li></ul></li>
 <li><a href="#12-unary-operators"><strong>Unary operators</strong></a> MUST be attached to their variable or integer<ul>
-<li>e.g. <code>$index++</code>, <code>--$index</code></li>
-</ul>
-</li>
+<li>e.g. <code>$index++</code>, <code>--$index</code></li></ul></li>
 <li><a href="#13-concatenation-period"><strong>Concatenation period</strong></a> MUST be surrounded by a space<ul>
-<li>e.g. <code>echo &#39;Read:&#39; . $welcome_message;</code></li>
-</ul>
-</li>
+<li>e.g. <code>echo 'Read:' . $welcome_message;</code></li></ul></li>
 <li><a href="#14-single-quotes"><strong>Single quotes</strong></a> MUST be used<ul>
-<li>e.g. <code>echo &#39;Hello, World!&#39;;</code></li>
-</ul>
-</li>
+<li>e.g. <code>echo 'Hello, World!';</code></li></ul></li>
 <li><a href="#15-double-quotes"><strong>Double quotes</strong></a> SHOULD NOT be used<ul>
-<li>e.g. <code>echo &quot;Read: $welcome_message&quot;;</code> &rarr; <code>echo &#39;Read: &#39; . $welcome_message;</code></li>
-</ul>
-</li>
+<li>e.g. <code>echo "Read: $welcome_message";</code> &rarr; <code>echo 'Read: ' . $welcome_message;</code></li></ul></li>
 </ol>
 <p>&#9650; <a href="#table-of-contents">Table of Contents</a></p>
 <!-- ------------------------------ -->
 <h3 id="1-line-length">1. Line Length</h3>
 <p>Line length MUST NOT exceed 80 characters, unless it is text.</p>
-<h4 id="-10006-incorrect">&#10006; Incorrect</h4>
+<h4 id="10006-incorrect-16">&#10006; Incorrect</h4>
 <pre lang=php>
 &lt;?php
 
@@ -986,7 +842,6 @@ if(in_array('Slumdog Millionaire', $movies) && in_array('Silver Linings Playbook
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because expression exceeds 80 characters and should be refactored.</p>
 <pre lang=php>
 &lt;?php
@@ -996,9 +851,8 @@ $my_movies = array('Slumdog Millionaire', 'Silver Linings Playbook', 'The Lives 
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because arguments exceed 80 characters and should be placed on their own line.</p>
-<h4 id="-acceptable">~ Acceptable</h4>
+<h4 id="-acceptable-4">~ Acceptable</h4>
 <pre lang=php>
 &lt;?php
 
@@ -1007,9 +861,8 @@ $text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere 
 // EOF
 
 </pre>
-
 <p>&#8627; Acceptable because line length was exceeded due to text, not code.</p>
-<h4 id="-10004-correct">&#10004; Correct</h4>
+<h4 id="10004-correct-16">&#10004; Correct</h4>
 <pre lang=php>
 &lt;?php
 
@@ -1040,12 +893,11 @@ $some_long_variable = get_something_else(
 // EOF
 
 </pre>
-
 <p>&#9650; <a href="#8-formatting">Formatting</a></p>
 <!-- ------------------------------ -->
 <h3 id="2-line-indentation">2. Line Indentation</h3>
 <p>Line indentation MUST be accomplished using tabs.</p>
-<h4 id="-10006-incorrect">&#10006; Incorrect</h4>
+<h4 id="10006-incorrect-17">&#10006; Incorrect</h4>
 <pre lang=php>
 &lt;?php
 
@@ -1056,9 +908,8 @@ function print_welcome_message() {
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because spaces are used to indent <code>echo WELCOME_MESSAGE;</code> instead of a tab.</p>
-<h4 id="-10004-correct">&#10004; Correct</h4>
+<h4 id="10004-correct-17">&#10004; Correct</h4>
 <pre lang=php>
 &lt;?php
 
@@ -1069,12 +920,11 @@ function print_welcome_message() {
 // EOF
 
 </pre>
-
 <p>&#9650; <a href="#8-formatting">Formatting</a></p>
 <!-- ------------------------------ -->
 <h3 id="3-blank-lines">3. Blank Lines</h3>
 <p>Blank lines SHOULD be added between logical blocks of code.</p>
-<h4 id="-acceptable">~ Acceptable</h4>
+<h4 id="-acceptable-5">~ Acceptable</h4>
 <pre lang=php>
 &lt;?php
 
@@ -1097,9 +947,8 @@ if($has_all_movies) {
 // EOF
 
 </pre>
-
 <p>&#8627; Acceptable, but can make scanning code more difficult.</p>
-<h4 id="-10004-preferred">&#10004; Preferred</h4>
+<h4 id="10004-preferred-4">&#10004; Preferred</h4>
 <pre lang=php>
 &lt;?php
 
@@ -1125,26 +974,24 @@ if($has_all_movies) {
 // EOF
 
 </pre>
-
 <p>&#9650; <a href="#8-formatting">Formatting</a></p>
 <!-- ------------------------------ -->
 <h3 id="4-text-alignment">4. Text Alignment</h3>
 <p>Text alignment MUST be accomplished using spaces.</p>
-<h4 id="-10006-incorrect">&#10006; Incorrect</h4>
+<h4 id="10006-incorrect-18">&#10006; Incorrect</h4>
 <pre lang=php>
 &lt;?php
 
 $movie_quotes = array(
-    'slumdog_millionaire'        => 'When somebody asks me a question, I tell them the answer.',
-    'silver_linings_playbook'    => 'I opened up to you, and you judged me.',
-    'the_lives_of_others'        => 'To think that people like you ruled a country.',
-    'the_shawshank_redemption'    => 'Get busy living, or get busy dying.'
+    'slumdog_millionaire'       => 'When somebody asks me a question, I tell them the answer.',
+    'silver_linings_playbook'   => 'I opened up to you, and you judged me.',
+    'the_lives_of_others'       => 'To think that people like you ruled a country.',
+    'the_shawshank_redemption'  => 'Get busy living, or get busy dying.'
 );
 
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because tabs are used instead of spaces to vertically align <code>=&gt;</code>.</p>
 <pre lang=php>
 &lt;?php
@@ -1159,9 +1006,8 @@ $movie_quotes = array(
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because spaces are used instead of tabs to indent array keys.</p>
-<h4 id="-10004-correct">&#10004; Correct</h4>
+<h4 id="10004-correct-18">&#10004; Correct</h4>
 <pre lang=php>
 &lt;?php
 
@@ -1175,12 +1021,11 @@ $movie_quotes = array(
 // EOF
 
 </pre>
-
 <p>&#9650; <a href="#8-formatting">Formatting</a></p>
 <!-- ------------------------------ -->
 <h3 id="5-trailing-whitespace">5. Trailing Whitespace</h3>
 <p>Trailing whitespace MUST NOT be present after statements or serial comma break or on blank lines.</p>
-<h4 id="-10006-incorrect">&#10006; Incorrect</h4>
+<h4 id="10006-incorrect-19">&#10006; Incorrect</h4>
 <pre lang=php>
 &lt;?php
 
@@ -1191,7 +1036,6 @@ print_welcome_message();
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because there are two spaces after <code>$quotes_exist = false;</code>.</p>
 <pre lang=php>
 &lt;?php
@@ -1206,7 +1050,6 @@ $my_movies = array(
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because there is a space after <code>,</code>.</p>
 <pre lang=php>
 &lt;?php
@@ -1218,9 +1061,8 @@ print_welcome_message();
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because there are two spaces on the blank line below <code>$quotes_exist = false;</code>.</p>
-<h4 id="-10004-correct">&#10004; Correct</h4>
+<h4 id="10004-correct-19">&#10004; Correct</h4>
 <pre lang=php>
 &lt;?php
 
@@ -1231,7 +1073,6 @@ print_welcome_message();
 // EOF
 
 </pre>
-
 <pre lang=php>
 &lt;?php
 
@@ -1245,12 +1086,11 @@ $my_movies = array(
 // EOF
 
 </pre>
-
 <p>&#9650; <a href="#8-formatting">Formatting</a></p>
 <!-- ------------------------------ -->
 <h3 id="6-keywords">6. Keywords</h3>
 <p>Keywords MUST be all lowercase.</p>
-<h4 id="-10006-incorrect">&#10006; Incorrect</h4>
+<h4 id="10006-incorrect-20">&#10006; Incorrect</h4>
 <pre lang=php>
 &lt;?php
 
@@ -1261,9 +1101,8 @@ $movie_quote = NULL;
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because <code>FALSE</code>, <code>TRUE</code> and <code>NULL</code> are not all lowercase.</p>
-<h4 id="-10004-correct">&#10004; Correct</h4>
+<h4 id="10004-correct-20">&#10004; Correct</h4>
 <pre lang=php>
 &lt;?php
 
@@ -1274,12 +1113,11 @@ $movie_quote = null;
 // EOF
 
 </pre>
-
 <p>&#9650; <a href="#8-formatting">Formatting</a></p>
 <!-- ------------------------------ -->
 <h3 id="7-variables">7. Variables</h3>
 <p>Variables MUST be all lowercase and words MUST be separated by an underscore.</p>
-<h4 id="-10006-incorrect">&#10006; Incorrect</h4>
+<h4 id="10006-incorrect-21">&#10006; Incorrect</h4>
 <pre lang=php>
 &lt;?php
 
@@ -1290,7 +1128,6 @@ $WELCOME_MESSAGE = '';
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because <code>$welcome_Message</code>, <code>$Welcome_Message</code> and <code>$WELCOME_MESSAGE</code> are not all lowercase.</p>
 <pre lang=php>
 &lt;?php
@@ -1300,9 +1137,8 @@ $welcomemessage = '';
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because <code>welcome</code> and <code>message</code> are not separated with an underscore.</p>
-<h4 id="-10004-correct">&#10004; Correct</h4>
+<h4 id="10004-correct-21">&#10004; Correct</h4>
 <pre lang=php>
 &lt;?php
 
@@ -1311,12 +1147,11 @@ $welcome_message = '';
 // EOF
 
 </pre>
-
 <p>&#9650; <a href="#8-formatting">Formatting</a></p>
 <!-- ------------------------------ -->
 <h3 id="8-global-variables">8. Global Variables</h3>
 <p>Global variables MUST be declared one variable per line and MUST be indented after the first.</p>
-<h4 id="-10006-incorrect">&#10006; Incorrect</h4>
+<h4 id="10006-incorrect-22">&#10006; Incorrect</h4>
 <pre lang=php>
 &lt;?php
 
@@ -1325,7 +1160,6 @@ global $app_config, $cache, $db_connection;
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because <code>$app_config</code>, <code>$cache</code> and <code>$db_connection</code> are together on one line.</p>
 <pre lang=php>
 &lt;?php
@@ -1337,9 +1171,8 @@ $db_connection;
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because <code>$db_connection</code> and <code>$cache</code> are not indentend once.</p>
-<h4 id="-10004-correct">&#10004; Correct</h4>
+<h4 id="10004-correct-22">&#10004; Correct</h4>
 <pre lang=php>
 &lt;?php
 
@@ -1350,12 +1183,11 @@ global $app_config,
 // EOF
 
 </pre>
-
 <p>&#9650; <a href="#8-formatting">Formatting</a></p>
 <!-- ------------------------------ -->
 <h3 id="9-constants">9. Constants</h3>
 <p>Constants MUST be all uppercase and words MUST be separated by an underscore.</p>
-<h4 id="-10006-incorrect">&#10006; Incorrect</h4>
+<h4 id="10006-incorrect-23">&#10006; Incorrect</h4>
 <pre lang=php>
 &lt;?php
 
@@ -1366,7 +1198,6 @@ define('welcome_message', '');
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because <code>welcome_Message</code>, <code>Welcome_Message</code> and <code>welcome_message</code> are not all uppercase.</p>
 <pre lang=php>
 &lt;?php
@@ -1376,9 +1207,8 @@ define('WELCOMEMESSAGE', '');
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because <code>WELCOME</code> and <code>MESSAGE</code> are not separated with an underscore.</p>
-<h4 id="-10004-correct">&#10004; Correct</h4>
+<h4 id="10004-correct-23">&#10004; Correct</h4>
 <pre lang=php>
 &lt;?php
 
@@ -1387,12 +1217,11 @@ define('WELCOME_MESSAGE', '');
 // EOF
 
 </pre>
-
 <p>&#9650; <a href="#8-formatting">Formatting</a></p>
 <!-- ------------------------------ -->
 <h3 id="10-statements">10. Statements</h3>
 <p>Statements MUST be placed on their own line and MUST end with a semicolon.</p>
-<h4 id="-10006-incorrect">&#10006; Incorrect</h4>
+<h4 id="10006-incorrect-24">&#10006; Incorrect</h4>
 <pre lang=php>
 &lt;?php
 
@@ -1401,16 +1230,14 @@ $quotes_exist = false; print_welcome_message();
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because <code>$quotes_exist = false;</code> and <code>print_welcome_message();</code> are on one line.</p>
 <pre lang=html>
 &lt;div&gt;
     &lt;h1&gt;&lt;?= print_welcome_message() ?&gt;&lt;/h1&gt;
 &lt;/div&gt;
 </pre>
-
 <p>&#8627; Incorrect because <code>print_welcome_message()</code> is missing a semicolon.</p>
-<h4 id="-10004-correct">&#10004; Correct</h4>
+<h4 id="10004-correct-24">&#10004; Correct</h4>
 <pre lang=php>
 &lt;?php
 
@@ -1420,18 +1247,16 @@ print_welcome_message();
 // EOF
 
 </pre>
-
 <pre lang=html>
 &lt;div&gt;
     &lt;h1&gt;&lt;?= print_welcome_message() ?&gt;&lt;/h1&gt;
 &lt;/div&gt;
 </pre>
-
 <p>&#9650; <a href="#8-formatting">Formatting</a></p>
 <!-- ------------------------------ -->
 <h3 id="11-operators">11. Operators</h3>
 <p>Operators MUST be surrounded a space.</p>
-<h4 id="-10006-incorrect">&#10006; Incorrect</h4>
+<h4 id="10006-incorrect-25">&#10006; Incorrect</h4>
 <pre lang=php>
 &lt;?php
 
@@ -1442,9 +1267,8 @@ $string.='Today is a good day!';
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because there is no space surrounding the <code>=</code>, <code>+</code> or <code>.=</code> sign.</p>
-<h4 id="-10004-correct">&#10004; Correct</h4>
+<h4 id="10004-correct-25">&#10004; Correct</h4>
 <pre lang=php>
 &lt;?php
 
@@ -1455,12 +1279,11 @@ $string .= 'Today is a good day!';
 // EOF
 
 </pre>
-
 <p>&#9650; <a href="#8-formatting">Formatting</a></p>
 <!-- ------------------------------ -->
 <h3 id="12-unary-operators">12. Unary Operators</h3>
 <p>Unary operators MUST be attached to their variable or integer.</p>
-<h4 id="-10006-incorrect">&#10006; Incorrect</h4>
+<h4 id="10006-incorrect-26">&#10006; Incorrect</h4>
 <pre lang=php>
 &lt;?php
 
@@ -1470,9 +1293,8 @@ $index ++;
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because there is a space before <code>++</code> and after <code>--</code>.</p>
-<h4 id="-10004-correct">&#10004; Correct</h4>
+<h4 id="10004-correct-26">&#10004; Correct</h4>
 <pre lang=php>
 &lt;?php
 
@@ -1482,12 +1304,11 @@ $index++;
 // EOF
 
 </pre>
-
 <p>&#9650; <a href="#8-formatting">Formatting</a></p>
 <!-- ------------------------------ -->
 <h3 id="13-concatenation-period">13. Concatenation Period</h3>
 <p>Concatenation period MUST be surrounded by a space.</p>
-<h4 id="-10006-incorrect">&#10006; Incorrect</h4>
+<h4 id="10006-incorrect-27">&#10006; Incorrect</h4>
 <pre lang=php>
 &lt;?php
 
@@ -1496,9 +1317,8 @@ echo 'Hello, World! Today is '.$date.'!';
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because there is no space surrounding <code>.</code>.</p>
-<h4 id="-10004-correct">&#10004; Correct</h4>
+<h4 id="10004-correct-27">&#10004; Correct</h4>
 <pre lang=php>
 &lt;?php
 
@@ -1507,12 +1327,11 @@ echo 'Hello, World! Today is ' . $date . '!';
 // EOF
 
 </pre>
-
 <p>&#9650; <a href="#8-formatting">Formatting</a></p>
 <!-- ------------------------------ -->
 <h3 id="14-single-quotes">14. Single Quotes</h3>
 <p>Single quotes MUST be used.</p>
-<h4 id="-10006-incorrect">&#10006; Incorrect</h4>
+<h4 id="10006-incorrect-28">&#10006; Incorrect</h4>
 <pre lang=php>
 &lt;?php
 
@@ -1521,9 +1340,8 @@ echo "Hello, World!";
 // EOF
 
 </pre>
-
-<p>&#8627; Incorrect because <code>&quot;Hello, World!&quot;</code> is not written with single quotes.</p>
-<h4 id="-10004-correct">&#10004; Correct</h4>
+<p>&#8627; Incorrect because <code>"Hello, World!"</code> is not written with single quotes.</p>
+<h4 id="10004-correct-28">&#10004; Correct</h4>
 <pre lang=php>
 &lt;?php
 
@@ -1532,12 +1350,11 @@ echo 'Hello, World!';
 // EOF
 
 </pre>
-
 <p>&#9650; <a href="#8-formatting">Formatting</a></p>
 <!-- ------------------------------ -->
 <h3 id="15-double-quotes">15. Double Quotes</h3>
 <p>Double quotes SHOULD NOT be used.</p>
-<h4 id="-acceptable">~ Acceptable</h4>
+<h4 id="-acceptable-6">~ Acceptable</h4>
 <pre lang=php>
 &lt;?php
 
@@ -1546,7 +1363,6 @@ echo "Hello, World! Today is $date!";
 // EOF
 
 </pre>
-
 <p>&#8627; Acceptable, but burries the <code>$date</code> variable, which is why single quotes are preferred.</p>
 <pre lang=php>
 &lt;?php
@@ -1556,9 +1372,8 @@ echo "Hello, World! He's watching movies and she's reading books.";
 // EOF
 
 </pre>
-
 <p>&#8627; Acceptable when long pieces of text have apostrophies that would need to be escaped.</p>
-<h4 id="-10004-preferred">&#10004; Preferred</h4>
+<h4 id="10004-preferred-5">&#10004; Preferred</h4>
 <pre lang=php>
 &lt;?php
 
@@ -1569,24 +1384,17 @@ echo 'Hello, World! He\'s watching movies and she\'s reading books.';
 // EOF
 
 </pre>
-
 <p>&#9650; <a href="#8-formatting">Formatting</a></p>
 <!-- ---------------------------------------------------------------------- -->
 <h2 id="9-functions">9. Functions</h2>
 <p>This section describes the format for function names, calls, arguments and declarations.</p>
 <ol>
 <li><a href="#1-function-name"><strong>Function name</strong></a> MUST be all lowercase and words MUST be separated by an underscore<ul>
-<li>e.g. <code>function welcome_message() {</code></li>
-</ul>
-</li>
+<li>e.g. <code>function welcome_message() {</code></li></ul></li>
 <li><a href="#2-function-prefix"><strong>Function prefix</strong></a> MUST start with verb<ul>
-<li>e.g. <code>get_</code>, <code>add_</code>, <code>update_</code>, <code>delete_</code>, <code>convert_</code>, etc.</li>
-</ul>
-</li>
+<li>e.g. <code>get_</code>, <code>add_</code>, <code>update_</code>, <code>delete_</code>, <code>convert_</code>, etc.</li></ul></li>
 <li><a href="#3-function-call"><strong>Function call</strong></a> MUST NOT have a space between function name and open parenthesis<ul>
-<li>e.g. <code>func();</code></li>
-</ul>
-</li>
+<li>e.g. <code>func();</code></li></ul></li>
 <li><a href="#4-function-arguments"><strong>Function arguments</strong></a><ul>
 <li>MUST NOT have a space before the comma</li>
 <li>MUST have a space after the comma</li>
@@ -1597,32 +1405,26 @@ echo 'Hello, World! He\'s watching movies and she\'s reading books.';
 <li>MUST be ordered from high to low importance second</li>
 <li>MUST use descriptive defaults</li>
 <li>MUST use type hinting</li>
-<li>e.g. <code>func($arg1, $arg2 = &#39;asc&#39;, $arg3 = 100);</code></li>
-</ul>
-</li>
+<li>e.g. <code>func($arg1, $arg2 = 'asc', $arg3 = 100);</code></li></ul></li>
 <li><a href="#5-function-declaration"><strong>Function declaration</strong></a> MUST be documented using <a href="http://phpdoc.org/docs/latest/index.html">phpDocumentor</a> tag style and SHOULD include<ul>
 <li>Short description</li>
 <li>Optional long description, if needed</li>
-<li>@access: <code>private</code> or <code>protected</code> (assumed <code>public</code>)</li>
-<li>@author: Author name</li>
-<li>@global: Global variables function uses, if applicable</li>
-<li>@param: Parameters with data type, variable name, and description</li>
-<li>@return: Return data type, if applicable</li>
-</ul>
-</li>
+<li><a href="https://github.com/access">@access</a>: <code>private</code> or <code>protected</code> (assumed <code>public</code>)</li>
+<li><a href="https://github.com/author">@author</a>: Author name</li>
+<li><a href="https://github.com/global">@global</a>: Global variables function uses, if applicable</li>
+<li><a href="https://github.com/param">@param</a>: Parameters with data type, variable name, and description</li>
+<li><a href="https://github.com/return">@return</a>: Return data type, if applicable</li></ul></li>
 <li><a href="#6-function-return"><strong>Function return</strong></a><ul>
 <li>MUST occur as early as possible </li>
 <li>MUST be initialized prior at top</li>
 <li>MUST be preceded by blank line, except inside control statement</li>
-<li>i.e. <code>if (!$expr) { return false; }</code></li>
-</ul>
-</li>
+<li>i.e. <code>if (!$expr) { return false; }</code></li></ul></li>
 </ol>
 <p>&#9650; <a href="#table-of-contents">Table of Contents</a></p>
 <!-- ------------------------------ -->
 <h3 id="1-function-name">1. Function Name</h3>
 <p>Function name MUST be all lowercase and words MUST be separated by an underscore.</p>
-<h4 id="-10006-incorrect">&#10006; Incorrect</h4>
+<h4 id="10006-incorrect-29">&#10006; Incorrect</h4>
 <pre lang=php>
 &lt;?php
 
@@ -1633,7 +1435,6 @@ GET_WELCOME_MESSAGE();
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because the function names are not all lowercase.</p>
 <pre lang=php>
 &lt;?php
@@ -1643,9 +1444,8 @@ getwelcomemessage();
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because <code>get</code>, <code>welcome</code> and <code>message</code> are not separated with an underscore.</p>
-<h4 id="-10004-correct">&#10004; Correct</h4>
+<h4 id="10004-correct-29">&#10004; Correct</h4>
 <pre lang=php>
 &lt;?php
 
@@ -1654,12 +1454,11 @@ get_welcome_message();
 // EOF
 
 </pre>
-
 <p>&#9650; <a href="#9-functions">Functions</a></p>
 <!-- ------------------------------ -->
 <h3 id="2-function-prefix">2. Function Prefix</h3>
 <p>Function prefix MUST start with verb.</p>
-<h4 id="-10006-incorrect">&#10006; Incorrect</h4>
+<h4 id="10006-incorrect-30">&#10006; Incorrect</h4>
 <pre lang=php>
 &lt;?php
 
@@ -1670,9 +1469,8 @@ widget_form($id);
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because functions are not prefixed with a verb.</p>
-<h4 id="-10004-correct">&#10004; Correct</h4>
+<h4 id="10004-correct-30">&#10004; Correct</h4>
 <pre lang=php>
 &lt;?php
 
@@ -1683,12 +1481,11 @@ delete_widget_form($id);
 // EOF
 
 </pre>
-
 <p>&#9650; <a href="#9-functions">Functions</a></p>
 <!-- ------------------------------ -->
 <h3 id="3-function-call">3. Function Call</h3>
 <p>Function call MUST NOT have a space between function name and open parenthesis.</p>
-<h4 id="-10006-incorrect">&#10006; Incorrect</h4>
+<h4 id="10006-incorrect-31">&#10006; Incorrect</h4>
 <pre lang=php>
 &lt;?php
 
@@ -1697,9 +1494,8 @@ print_welcome_message ();
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because there is a space between <code>get_welcome_message</code> and <code>()</code>.</p>
-<h4 id="-10004-correct">&#10004; Correct</h4>
+<h4 id="10004-correct-31">&#10004; Correct</h4>
 <pre lang=php>
 &lt;?php
 
@@ -1708,7 +1504,6 @@ print_welcome_message();
 // EOF
 
 </pre>
-
 <p>&#9650; <a href="#9-functions">Functions</a></p>
 <!-- ------------------------------ -->
 <h3 id="4-function-arguments">4. Function Arguments</h3>
@@ -1724,7 +1519,7 @@ print_welcome_message();
 <li>MUST use descriptive defaults</li>
 <li>MUST use type hinting</li>
 </ul>
-<h4 id="-10006-incorrect">&#10006; Incorrect</h4>
+<h4 id="10006-incorrect-32">&#10006; Incorrect</h4>
 <pre lang=php>
 &lt;?php
 
@@ -1733,7 +1528,6 @@ my_function($arg1 , $arg2 , $arg3);
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because there is a space before <code>,</code>.</p>
 <pre lang=php>
 &lt;?php
@@ -1743,7 +1537,6 @@ my_function($arg1,$arg2,$arg3);
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because there is no space after <code>,</code>.</p>
 <pre lang=php>
 &lt;?php
@@ -1756,7 +1549,6 @@ my_other_function($arg1_with_a_really_long_name,
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because <code>$arg1_with_a_really_long_name</code> is not on its own line.</p>
 <pre lang=php>
 &lt;?php
@@ -1770,7 +1562,6 @@ $arg3
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because arguments are not indented once.</p>
 <pre lang=php>
 &lt;?php
@@ -1782,7 +1573,6 @@ function get_objects($type, $order = 'asc', $limit) {
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because <code>$type</code>, <code>$order</code> and <code>$limit</code> are not in order of required to optional.</p>
 <pre lang=php>
 &lt;?php
@@ -1794,7 +1584,6 @@ function get_objects($limit, $order, $type) {
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because <code>$limit</code>, <code>$order</code> and <code>$type</code> are not in order of importance.</p>
 <pre lang=php>
 &lt;?php
@@ -1806,7 +1595,6 @@ function get_objects($type, $order = true, $limit = 100) {
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because <code>true</code> is not a descriptive default for <code>$order</code>.</p>
 <pre lang=php>
 &lt;?php
@@ -1818,9 +1606,8 @@ function add_users_to_office($users, $office) {
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because <code>$users</code> and <code>$office</code> are missing their data type.</p>
-<h4 id="-10004-correct">&#10004; Correct</h4>
+<h4 id="10004-correct-32">&#10004; Correct</h4>
 <pre lang=php>
 &lt;?php
 
@@ -1843,7 +1630,6 @@ function add_users_to_office(array $users, Office $office) {
 // EOF
 
 </pre>
-
 <p>&#9650; <a href="#9-functions">Functions</a></p>
 <!-- ------------------------------ -->
 <h3 id="5-function-declaration">5. Function Declaration</h3>
@@ -1851,13 +1637,13 @@ function add_users_to_office(array $users, Office $office) {
 <ul>
 <li>Short description</li>
 <li>Optional long description, if needed</li>
-<li>@access: <code>private</code> or <code>protected</code> (assumed <code>public</code>)</li>
-<li>@author: Author name</li>
-<li>@global: Global variables function uses, if applicable</li>
-<li>@param: Parameters with data type, variable name, and description</li>
-<li>@return: Return data type, if applicable</li>
+<li><a href="https://github.com/access">@access</a>: <code>private</code> or <code>protected</code> (assumed <code>public</code>)</li>
+<li><a href="https://github.com/author">@author</a>: Author name</li>
+<li><a href="https://github.com/global">@global</a>: Global variables function uses, if applicable</li>
+<li><a href="https://github.com/param">@param</a>: Parameters with data type, variable name, and description</li>
+<li><a href="https://github.com/return">@return</a>: Return data type, if applicable</li>
 </ul>
-<h4 id="-10006-incorrect">&#10006; Incorrect</h4>
+<h4 id="10006-incorrect-33">&#10006; Incorrect</h4>
 <pre lang=php>
 &lt;?php
 
@@ -1869,9 +1655,8 @@ function my_function($id, $type, $width, $height) {
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because <code>my_function</code> is not documented.</p>
-<h4 id="-10004-correct">&#10004; Correct</h4>
+<h4 id="10004-correct-33">&#10004; Correct</h4>
 <pre lang=php>
 &lt;?php
 
@@ -1899,7 +1684,6 @@ function my_function($id, $type, $width, $height) {
 // EOF
 
 </pre>
-
 <p>&#9650; <a href="#9-functions">Functions</a></p>
 <!-- ------------------------------ -->
 <h3 id="6-function-return">6. Function Return</h3>
@@ -1909,7 +1693,7 @@ function my_function($id, $type, $width, $height) {
 <li>MUST be initialized prior at top</li>
 <li>MUST be preceded by blank line, except inside control statement</li>
 </ul>
-<h4 id="-10006-incorrect">&#10006; Incorrect</h4>
+<h4 id="10006-incorrect-34">&#10006; Incorrect</h4>
 <pre lang=php>
 &lt;?php
 
@@ -1928,7 +1712,6 @@ function get_object() {
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because <code>get_object</code> does not return as early as possible.</p>
 <pre lang=php>
 &lt;?php
@@ -1942,7 +1725,6 @@ function get_movies() {
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because <code>$movies</code> is not initialized at top.</p>
 <pre lang=php>
 &lt;?php
@@ -1956,9 +1738,8 @@ function get_movies() {
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because <code>return $movies</code> is not preceded by blank line.</p>
-<h4 id="-10004-correct">&#10004; Correct</h4>
+<h4 id="10004-correct-34">&#10004; Correct</h4>
 <pre lang=php>
 &lt;?php
 
@@ -1978,7 +1759,6 @@ function get_object() {
 // EOF
 
 </pre>
-
 <pre lang=php>
 &lt;?php
 
@@ -1992,73 +1772,44 @@ function get_movies() {
 // EOF
 
 </pre>
-
 <p>&#9650; <a href="#9-functions">Functions</a></p>
 <!-- ---------------------------------------------------------------------- -->
 <h2 id="10-control-structures">10. Control Structures</h2>
 <p>This section defines the layout and usage of control structures. Note that this section is separated into rules that are applicable to all structures, followed by specific rules for individual structures.</p>
 <ul>
 <li><strong>Keyword</strong> MUST be followed by a space<ul>
-<li>e.g. <code>if (</code>, <code>switch (</code>, <code>do {</code>, <code>for (</code></li>
-</ul>
-</li>
+<li>e.g. <code>if (</code>, <code>switch (</code>, <code>do {</code>, <code>for (</code></li></ul></li>
 <li><strong>Opening parenthesis</strong> MUST NOT be followed by a space<ul>
-<li>e.g. <code>($expr</code>, <code>($i</code></li>
-</ul>
-</li>
+<li>e.g. <code>($expr</code>, <code>($i</code></li></ul></li>
 <li><strong>Closing parenthesis</strong> MUST NOT be preceded by a space<ul>
-<li>e.g. <code>$expr)</code>, <code>$i++)</code>, <code>$value)</code></li>
-</ul>
-</li>
+<li>e.g. <code>$expr)</code>, <code>$i++)</code>, <code>$value)</code></li></ul></li>
 <li><strong>Opening brace</strong> MUST be preceded by a space and MUST be followed by a new line<ul>
-<li>e.g. <code>$expr) {</code>, <code>$i++) {</code></li>
-</ul>
-</li>
+<li>e.g. <code>$expr) {</code>, <code>$i++) {</code></li></ul></li>
 <li><strong>Structure body</strong> MUST be indented once and MUST be enclosed with curly braces (no shorthand)<ul>
-<li>e.g. <code>if ($expr) {</code> <code>↵</code> <code>⇥</code> <code>...</code> <code>↵</code> <code>}</code></li>
-</ul>
-</li>
+<li>e.g. <code>if ($expr) {</code> <code>↵</code> <code>⇥</code> <code>...</code> <code>↵</code> <code>}</code></li></ul></li>
 <li><strong>Closing brace</strong> MUST start on the next line<ul>
-<li>i.e. <code>...</code> <code>↵</code> <code>}</code></li>
-</ul>
-</li>
+<li>i.e. <code>...</code> <code>↵</code> <code>}</code></li></ul></li>
 <li><strong>Nesting</strong> MUST NOT exceed three levels<ul>
-<li>e.g. no <code>if ($expr1) { if ($expr2) { if ($expr3) { if ($expr4) {</code> <code>...</code> <code>}}}}</code></li>
-</ul>
-</li>
+<li>e.g. no <code>if ($expr1) { if ($expr2) { if ($expr3) { if ($expr4) {</code> <code>...</code> <code>}}}}</code></li></ul></li>
 </ul>
 <p>In addition to the rules above, some control structures have additional requirements:</p>
 <ol>
 <li><a href="#1-if-elseif-else"><strong>If, Elseif, Else</strong></a><ul>
 <li><code>elseif</code> MUST be used instead of <code>else if</code></li>
-<li><code>elseif</code> and <code>else</code> MUST be between <code>}</code> and <code>{</code> on one line</li>
-</ul>
-</li>
+<li><code>elseif</code> and <code>else</code> MUST be between <code>}</code> and <code>{</code> on one line</li></ul></li>
 <li><a href="#2-switch-case"><strong>Switch, Case</strong></a><ul>
 <li>Case statement MUST be indented once<ul>
-<li>i.e. <code>⇥</code> <code>case 1:</code></li>
-</ul>
-</li>
+<li>i.e. <code>⇥</code> <code>case 1:</code></li></ul></li>
 <li>Case body MUST be indented twice<ul>
-<li>i.e. <code>⇥</code> <code>⇥</code> <code>func();</code></li>
-</ul>
-</li>
+<li>i.e. <code>⇥</code> <code>⇥</code> <code>func();</code></li></ul></li>
 <li>Break keyword MUST be indented twice<ul>
-<li>i.e. <code>⇥</code> <code>⇥</code> <code>break;</code></li>
-</ul>
-</li>
+<li>i.e. <code>⇥</code> <code>⇥</code> <code>break;</code></li></ul></li>
 <li>Case logic MUST be separated by one blank line<ul>
-<li>i.e. <code>case 1: ... break;</code> <code>↵</code> <code>↵</code> <code>case 2: ... break;</code></li>
-</ul>
-</li>
-</ul>
-</li>
+<li>i.e. <code>case 1: ... break;</code> <code>↵</code> <code>↵</code> <code>case 2: ... break;</code></li></ul></li></ul></li>
 <li><a href="#3-while-do-while"><strong>While, Do While</strong></a></li>
 <li><a href="#4-for-foreach"><strong>For, Foreach</strong></a></li>
 <li><a href="#5-try-catch"><strong>Try, Catch</strong></a><ul>
-<li><code>catch</code> MUST be between <code>}</code> and <code>{</code> on one line</li>
-</ul>
-</li>
+<li><code>catch</code> MUST be between <code>}</code> and <code>{</code> on one line</li></ul></li>
 </ol>
 <p>&#9650; <a href="#table-of-contents">Table of Contents</a></p>
 <!-- ------------------------------ -->
@@ -2067,7 +1818,7 @@ function get_movies() {
 <li><code>elseif</code> MUST be used instead of <code>else if</code></li>
 <li><code>elseif</code> and <code>else</code> MUST be between <code>}</code> and <code>{</code> on one line</li>
 </ul>
-<h4 id="-10006-incorrect">&#10006; Incorrect</h4>
+<h4 id="10006-incorrect-35">&#10006; Incorrect</h4>
 <pre lang=php>
 &lt;?php
 
@@ -2082,7 +1833,6 @@ if ($expr1) {
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because <code>else if</code> was used instead of <code>elseif</code>.</p>
 <pre lang=php>
 &lt;?php
@@ -2100,7 +1850,6 @@ else {
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because <code>elseif</code> and <code>else</code> are not between <code>}</code> and <code>{</code> on one line.</p>
 <pre lang=php>
 &lt;?php
@@ -2113,9 +1862,8 @@ if($expr2)
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because structure body is not wrapped in curly braces.</p>
-<h4 id="-10004-correct">&#10004; Correct</h4>
+<h4 id="10004-correct-35">&#10004; Correct</h4>
 <pre lang=php>
 &lt;?php
 
@@ -2140,7 +1888,6 @@ if ($expr2) {
 // EOF
 
 </pre>
-
 <p>&#9650; <a href="#10-control-structures">Control Structures</a></p>
 <!-- ------------------------------ -->
 <h3 id="2-switch-case">2. Switch, Case</h3>
@@ -2150,7 +1897,7 @@ if ($expr2) {
 <li>Break keyword MUST be indented twice</li>
 <li>Case logic MUST be separated by one blank line</li>
 </ul>
-<h4 id="-10006-incorrect">&#10006; Incorrect</h4>
+<h4 id="10006-incorrect-36">&#10006; Incorrect</h4>
 <pre lang=php>
 &lt;?php
 
@@ -2176,7 +1923,6 @@ default:
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because <code>case 0</code> thru <code>default</code> are not indented once.</p>
 <pre lang=php>
 &lt;?php
@@ -2203,7 +1949,6 @@ switch ($expr) {
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because <code>echo</code>, <code>break</code> and <code>return</code> are not indented twice.</p>
 <pre lang=php>
 &lt;?php
@@ -2228,9 +1973,8 @@ switch ($expr) {
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because <code>case 0</code>, <code>case 1</code> thru <code>case 4</code>, and <code>default</code> are not separated by one blank line.</p>
-<h4 id="-10004-correct">&#10004; Correct</h4>
+<h4 id="10004-correct-36">&#10004; Correct</h4>
 <pre lang=php>
 &lt;?php
 
@@ -2256,11 +2000,10 @@ switch ($expr) {
 // EOF
 
 </pre>
-
 <p>&#9650; <a href="#10-control-structures">Control Structures</a></p>
 <!-- ------------------------------ -->
 <h3 id="3-while-do-while">3. While, Do While</h3>
-<h4 id="-10004-correct">&#10004; Correct</h4>
+<h4 id="10004-correct-37">&#10004; Correct</h4>
 <pre lang=php>
 &lt;?php
 
@@ -2275,11 +2018,10 @@ do {
 // EOF
 
 </pre>
-
 <p>&#9650; <a href="#10-control-structures">Control Structures</a></p>
 <!-- ------------------------------ -->
 <h3 id="4-for-foreach">4. For, Foreach</h3>
-<h4 id="-10004-correct">&#10004; Correct</h4>
+<h4 id="10004-correct-38">&#10004; Correct</h4>
 <pre lang=php>
 &lt;?php
 
@@ -2294,11 +2036,10 @@ foreach ($iterable as $key => $value) {
 // EOF
 
 </pre>
-
 <p>&#9650; <a href="#10-control-structures">Control Structures</a></p>
 <!-- ------------------------------ -->
 <h3 id="5-try-catch">5. Try, Catch</h3>
-<h4 id="-10006-incorrect">&#10006; Incorrect</h4>
+<h4 id="10006-incorrect-37">&#10006; Incorrect</h4>
 <pre lang=php>
 &lt;?php
 
@@ -2315,9 +2056,8 @@ catch (OtherExceptionType $e) {
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because <code>catch</code> is not between <code>}</code> and <code>{</code> on one line.</p>
-<h4 id="-10004-correct">&#10004; Correct</h4>
+<h4 id="10004-correct-39">&#10004; Correct</h4>
 <pre lang=php>
 &lt;?php
 
@@ -2332,59 +2072,42 @@ try {
 // EOF
 
 </pre>
-
 <p>&#9650; <a href="#10-control-structures">Control Structures</a></p>
 <!-- ---------------------------------------------------------------------- -->
 <h2 id="11-classes">11. Classes</h2>
 <p>This section describes class files, names, definitions, properties, methods and instantiation.</p>
 <ol>
 <li><a href="#1-class-file"><strong>Class file</strong></a> MUST only contain one definition and MUST be prefixed with <code>class-</code><ul>
-<li>i.e. <code>class User</code> &rarr; <code>class-user.php</code>, <code>class Office</code> &rarr; <code>class-office.php</code></li>
-</ul>
-</li>
+<li>i.e. <code>class User</code> &rarr; <code>class-user.php</code>, <code>class Office</code> &rarr; <code>class-office.php</code></li></ul></li>
 <li><a href="#2-class-namespace"><strong>Class namespace</strong></a> MUST be defined and MUST include vendor name<ul>
-<li>e.g. <code>namespace MyCompany\Model;</code>, <code>namespace MyCompany\View;</code>, <code>namespace MyCompany\Controller;</code></li>
-</ul>
-</li>
+<li>e.g. <code>namespace MyCompany\Model;</code>, <code>namespace MyCompany\View;</code>, <code>namespace MyCompany\Controller;</code></li></ul></li>
 <li><a href="#3-class-name"><strong>Class name</strong></a> MUST start with a capital letter and MUST be camelcase<ul>
-<li>e.g. <code>MyCompany</code></li>
-</ul>
-</li>
+<li>e.g. <code>MyCompany</code></li></ul></li>
 <li><a href="#4-class-documentation"><strong>Class documentation</strong></a> MUST be present and MUST use <a href="http://phpdoc.org/docs/latest/index.html">phpDocumentor</a> tag style<ul>
-<li>i.e. <code>@author</code>, <code>@global</code>, <code>@package</code></li>
-</ul>
-</li>
+<li>i.e. <code>@author</code>, <code>@global</code>, <code>@package</code></li></ul></li>
 <li><a href="#5-class-definition"><strong>Class definition</strong></a> MUST place curly braces on their own line<ul>
-<li>i.e. <code>class User</code> <code>↵</code> <code>{</code> <code>↵</code> <code>...</code> <code>↵</code> <code>}</code></li>
-</ul>
-</li>
+<li>i.e. <code>class User</code> <code>↵</code> <code>{</code> <code>↵</code> <code>...</code> <code>↵</code> <code>}</code></li></ul></li>
 <li><a href="#6-class-properties"><strong>Class properties</strong></a><ul>
 <li>MUST follow <a href="#7-variables">variable standards</a></li>
 <li>MUST specify visibility</li>
 <li>MUST NOT be prefixed with an underscore if private or protected</li>
-<li>e.g. <code>$var1;</code>, <code>private $var2;</code>, <code>protected $var3;</code></li>
-</ul>
-</li>
+<li>e.g. <code>$var1;</code>, <code>private $var2;</code>, <code>protected $var3;</code></li></ul></li>
 <li><a href="#7-class-methods"><strong>Class methods</strong></a><ul>
 <li>MUST follow <a href="#9-functions">function standards</a></li>
 <li>MUST specify visibility</li>
 <li>MUST NOT be prefixed with an underscore if private or protected</li>
-<li>e.g. <code>func1()</code>, <code>private func2()</code>, <code>protected func3()</code></li>
-</ul>
-</li>
+<li>e.g. <code>func1()</code>, <code>private func2()</code>, <code>protected func3()</code></li></ul></li>
 <li><a href="#8-class-instance"><strong>Class instance</strong></a><ul>
 <li>MUST start with capital letter</li>
 <li>MUST be camelcase</li>
 <li>MUST include parenthesis</li>
-<li>e.g. <code>$user = new User();</code>, <code>$OfficeProgram = new OfficeProgram();</code></li>
-</ul>
-</li>
+<li>e.g. <code>$user = new User();</code>, <code>$OfficeProgram = new OfficeProgram();</code></li></ul></li>
 </ol>
 <p>&#9650; <a href="#table-of-contents">Table of Contents</a></p>
 <!-- ------------------------------ -->
 <h3 id="1-class-file">1. Class File</h3>
 <p>Class file MUST only contain one definition and MUST be prefixed with <code>class-</code>.</p>
-<h4 id="-10006-incorrect">&#10006; Incorrect</h4>
+<h4 id="10006-incorrect-38">&#10006; Incorrect</h4>
 <p>Filename: <code>class-user.php</code></p>
 <pre lang=php>
 &lt;?php
@@ -2404,7 +2127,6 @@ class Office
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because <code>User</code> and <code>Office</code> are defined in one file.</p>
 <p>Filename: <code>user.php</code></p>
 <pre lang=php>
@@ -2420,9 +2142,8 @@ class User
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because filename is not prefixed with <code>class-</code>.</p>
-<h4 id="-10004-correct">&#10004; Correct</h4>
+<h4 id="10004-correct-40">&#10004; Correct</h4>
 <p>Filename: <code>class-user.php</code></p>
 <pre lang=php>
 &lt;?php
@@ -2437,7 +2158,6 @@ class User
 // EOF
 
 </pre>
-
 <p>Filename: <code>class-office.php</code></p>
 <pre lang=php>
 &lt;?php
@@ -2452,12 +2172,11 @@ class Office
 // EOF
 
 </pre>
-
 <p>&#9650; <a href="#11-classes">Classes</a></p>
 <!-- ------------------------------ -->
 <h3 id="2-class-namespace">2. Class Namespace</h3>
 <p>Class namespace MUST be defined and MUST include vendor name.</p>
-<h4 id="-10006-incorrect">&#10006; Incorrect</h4>
+<h4 id="10006-incorrect-39">&#10006; Incorrect</h4>
 <pre lang=php>
 &lt;?php
 
@@ -2469,7 +2188,6 @@ class User
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because there is no namespace defined.</p>
 <pre lang=php>
 &lt;?php
@@ -2484,9 +2202,8 @@ class User
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because vendor name is missing in the namespace name.</p>
-<h4 id="-10004-correct">&#10004; Correct</h4>
+<h4 id="10004-correct-41">&#10004; Correct</h4>
 <pre lang=php>
 &lt;?php
 
@@ -2500,12 +2217,11 @@ class User
 // EOF
 
 </pre>
-
 <p>&#9650; <a href="#11-classes">Classes</a></p>
 <!-- ------------------------------ -->
 <h3 id="3-class-name">3. Class Name</h3>
 <p>Class name MUST start with a capital letter and MUST be camelcase.</p>
-<h4 id="-10006-incorrect">&#10006; Incorrect</h4>
+<h4 id="10006-incorrect-40">&#10006; Incorrect</h4>
 <pre lang=php>
 &lt;?php
 
@@ -2519,7 +2235,6 @@ class officeProgram
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because <code>officeProgram</code> does not start with a capital letter.</p>
 <pre lang=php>
 &lt;?php
@@ -2534,9 +2249,8 @@ class Officeprogram
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because <code>Officeprogram</code> is not camelcase.</p>
-<h4 id="-10004-correct">&#10004; Correct</h4>
+<h4 id="10004-correct-42">&#10004; Correct</h4>
 <pre lang=php>
 &lt;?php
 
@@ -2550,12 +2264,11 @@ class OfficeProgram
 // EOF
 
 </pre>
-
 <p>&#9650; <a href="#11-classes">Classes</a></p>
 <!-- ------------------------------ -->
 <h3 id="4-class-documentation">4. Class Documentation</h3>
 <p>Class documentation MUST be present and MUST use <a href="http://phpdoc.org/docs/latest/index.html">phpDocumentor</a> tag style.</p>
-<h4 id="-10006-incorrect">&#10006; Incorrect</h4>
+<h4 id="10006-incorrect-41">&#10006; Incorrect</h4>
 <pre lang=php>
 &lt;?php
 
@@ -2569,7 +2282,6 @@ class User
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because <code>User</code> is missing documentation.</p>
 <pre lang=php>
 &lt;?php
@@ -2587,9 +2299,8 @@ class User
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because <code>User</code> is missing <a href="http://phpdoc.org/docs/latest/index.html">phpDocumentor</a> tags.</p>
-<h4 id="-10004-correct">&#10004; Correct</h4>
+<h4 id="10004-correct-43">&#10004; Correct</h4>
 <pre lang=php>
 &lt;?php
 
@@ -2610,12 +2321,11 @@ class User
 // EOF
 
 </pre>
-
 <p>&#9650; <a href="#11-classes">Classes</a></p>
 <!-- ------------------------------ -->
 <h3 id="5-class-definition">5. Class Definition</h3>
 <p>Class definition MUST place curly braces on their own line.</p>
-<h4 id="-10006-incorrect">&#10006; Incorrect</h4>
+<h4 id="10006-incorrect-42">&#10006; Incorrect</h4>
 <pre lang=php>
 &lt;?php
 
@@ -2628,9 +2338,8 @@ class User {
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because <code>{</code> is not on its own line.</p>
-<h4 id="-10004-correct">&#10004; Correct</h4>
+<h4 id="10004-correct-44">&#10004; Correct</h4>
 <pre lang=php>
 &lt;?php
 
@@ -2644,7 +2353,6 @@ class User
 // EOF
 
 </pre>
-
 <p>&#9650; <a href="#11-classes">Classes</a></p>
 <!-- ------------------------------ -->
 <h3 id="6-class-properties">6. Class Properties</h3>
@@ -2654,7 +2362,7 @@ class User
 <li>MUST specify visibility</li>
 <li>MUST NOT be prefixed with an underscore if private or protected</li>
 </ul>
-<h4 id="-10006-incorrect">&#10006; Incorrect</h4>
+<h4 id="10006-incorrect-43">&#10006; Incorrect</h4>
 <pre lang=php>
 &lt;?php
 
@@ -2675,7 +2383,6 @@ class User
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because visibility is not specified for <code>$var1</code>, <code>$var2</code> and <code>$var3</code>.</p>
 <pre lang=php>
 &lt;?php
@@ -2692,9 +2399,8 @@ class User
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because <code>protected</code> and <code>private</code> properties are prefixed with <code>_</code>.</p>
-<h4 id="-10004-correct">&#10004; Correct</h4>
+<h4 id="10004-correct-45">&#10004; Correct</h4>
 <pre lang=php>
 &lt;?php
 
@@ -2710,7 +2416,6 @@ class User
 // EOF
 
 </pre>
-
 <p>&#9650; <a href="#11-classes">Classes</a></p>
 <!-- ------------------------------ -->
 <h3 id="7-class-methods">7. Class Methods</h3>
@@ -2720,7 +2425,7 @@ class User
 <li>MUST specify visibility</li>
 <li>MUST NOT be prefixed with an underscore if private or protected</li>
 </ul>
-<h4 id="-10006-incorrect">&#10006; Incorrect</h4>
+<h4 id="10006-incorrect-44">&#10006; Incorrect</h4>
 <pre lang=php>
 &lt;?php
 
@@ -2749,7 +2454,6 @@ class User
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because visibility is not specified for <code>get_var1()</code>, <code>get_var2()</code> and <code>get_var3()</code>.</p>
 <pre lang=php>
 &lt;?php
@@ -2776,9 +2480,8 @@ class User
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because <code>protected</code> and <code>private</code> methods are prefixed with <code>_</code>.</p>
-<h4 id="-10004-correct">&#10004; Correct</h4>
+<h4 id="10004-correct-46">&#10004; Correct</h4>
 <pre lang=php>
 &lt;?php
 
@@ -2804,7 +2507,6 @@ class User
 // EOF
 
 </pre>
-
 <p>&#9650; <a href="#11-classes">Classes</a></p>
 <!-- ------------------------------ -->
 <h3 id="8-class-instance">8. Class Instance</h3>
@@ -2813,7 +2515,7 @@ class User
 <li>MUST follow <a href="#7-variables">variable standards</a></li>
 <li>MUST include parenthesis</li>
 </ul>
-<h4 id="-10006-incorrect">&#10006; Incorrect</h4>
+<h4 id="10006-incorrect-45">&#10006; Incorrect</h4>
 <pre lang=php>
 &lt;?php
 
@@ -2822,9 +2524,8 @@ $office_program = new OfficeProgram;
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because <code>new OfficeProgram</code> is missing parenthesis.</p>
-<h4 id="-10004-correct">&#10004; Correct</h4>
+<h4 id="10004-correct-47">&#10004; Correct</h4>
 <pre lang=php>
 &lt;?php
 
@@ -2833,41 +2534,30 @@ $office_program = new OfficeProgram();
 // EOF
 
 </pre>
-
 <p>&#9650; <a href="#11-classes">Classes</a></p>
 <!-- ---------------------------------------------------------------------- -->
 <h2 id="12-best-practices">12. Best Practices</h2>
 <ol>
 <li><a href="#1-variable-initialization"><strong>Variable initialization</strong></a> SHOULD occur prior to use and SHOULD occur early<ul>
-<li>e.g. <code>$var1 = &#39;&#39;;</code>, <code>$var2 = 0;</code></li>
-</ul>
-</li>
+<li>e.g. <code>$var1 = '';</code>, <code>$var2 = 0;</code></li></ul></li>
 <li><a href="#2-initializationdeclaration-order"><strong>Initialization/declaration order</strong></a><ul>
 <li>MUST lead with globals, follow with constants, conclude with local variables</li>
 <li>MUST lead with properties and follow with methods in classes</li>
 <li>MUST lead with <code>public</code>, follow with <code>protected</code>, conclude with <code>private</code> methods in classes</li>
 <li>SHOULD be alphabetical within their type</li>
-<li>i.e. <code>global $var1;</code>, <code>define(&#39;VAR2&#39;, &#39;&#39;);</code>, <code>$var3 = 0;</code></li>
-</ul>
-</li>
+<li>i.e. <code>global $var1;</code>, <code>define('VAR2', '');</code>, <code>$var3 = 0;</code></li></ul></li>
 <li><a href="#4-globals"><strong>Globals</strong></a> SHOULD NOT be used<ul>
-<li>i.e. no <code>global $var;</code></li>
-</ul>
-</li>
+<li>i.e. no <code>global $var;</code></li></ul></li>
 <li><a href="#5-explicit-expressions"><strong>Explicit expressions</strong></a> SHOULD be used<ul>
-<li>e.g. <code>if ($expr === false)</code>, <code>while ($expr !== true)</code></li>
-</ul>
-</li>
+<li>e.g. <code>if ($expr === false)</code>, <code>while ($expr !== true)</code></li></ul></li>
 <li><a href="#6-e_strict-reporting"><strong>E_STRICT reporting</strong></a> MUST NOT trigger errors<ul>
-<li>i.e. do not use deprecated functions, etc.</li>
-</ul>
-</li>
+<li>i.e. do not use deprecated functions, etc.</li></ul></li>
 </ol>
 <p>&#9650; <a href="#table-of-contents">Table of Contents</a></p>
 <!-- ------------------------------ -->
 <h3 id="1-variable-initialization">1. Variable Initialization</h3>
 <p>Variable initialization SHOULD occur prior to use and SHOULD occur early.</p>
-<h4 id="-acceptable">~ Acceptable</h4>
+<h4 id="-acceptable-7">~ Acceptable</h4>
 <pre lang=php>
 &lt;?php
 
@@ -2876,7 +2566,6 @@ $movies = get_movies();
 // EOF
 
 </pre>
-
 <p>&#8627; Acceptable, but <code>$movies</code> should be initialized prior to use.</p>
 <pre lang=php>
 &lt;?php
@@ -2891,9 +2580,8 @@ $movies = get_movies();
 // EOF
 
 </pre>
-
 <p>&#8627; Acceptable, but <code>$movies</code> should be initialized earlier.</p>
-<h4 id="-10004-preferred">&#10004; Preferred</h4>
+<h4 id="10004-preferred-6">&#10004; Preferred</h4>
 <pre lang=php>
 &lt;?php
 
@@ -2908,10 +2596,9 @@ $movies = get_movies();
 // EOF
 
 </pre>
-
 <p>&#9650; <a href="#12-best-practices">Best Practices</a></p>
 <!-- ------------------------------ -->
-<h3 id="2-initialization-declaration-order">2. Initialization/Declaration Order</h3>
+<h3 id="2-initializationdeclaration-order">2. Initialization/Declaration Order</h3>
 <p>Initialization/declaration order:</p>
 <ul>
 <li>MUST lead with globals, follow with constants, conclude with local variables</li>
@@ -2919,7 +2606,7 @@ $movies = get_movies();
 <li>MUST lead with <code>public</code>, follow with <code>protected</code>, conclude with <code>private</code> methods in classes</li>
 <li>SHOULD be alphabetical within their type</li>
 </ul>
-<h4 id="-10006-incorrect">&#10006; Incorrect</h4>
+<h4 id="10006-incorrect-46">&#10006; Incorrect</h4>
 <pre lang=php>
 &lt;?php
 
@@ -2932,7 +2619,6 @@ global $app_config;
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because <code>$app_config</code> is not first, <code>ENVIRONMENT</code> not second, and <code>$id</code> not third.</p>
 <pre lang=php>
 &lt;?php
@@ -2951,7 +2637,6 @@ class Office
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because <code>get_name()</code> is declared before <code>$name</code>.</p>
 <pre lang=php>
 &lt;?php
@@ -2980,9 +2665,8 @@ class Office
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because <code>get_id()</code> is not first, <code>get_status()</code> not second, and <code>get_name()</code> not third.</p>
-<h4 id="-acceptable">~ Acceptable</h4>
+<h4 id="-acceptable-8">~ Acceptable</h4>
 <pre lang=php>
 &lt;?php
 
@@ -3000,7 +2684,6 @@ $lastname = '';
 // EOF
 
 </pre>
-
 <p>&#8627; Acceptable, but the globals and constants should be in alphabetical order.</p>
 <pre lang=php>
 &lt;?php
@@ -3016,9 +2699,8 @@ function get_actors() {
 // EOF
 
 </pre>
-
 <p>&#8627; Acceptable, but <code>get_actors</code> should be declared before <code>get_movies</code>.</p>
-<h4 id="-10004-correct">&#10004; Correct</h4>
+<h4 id="10004-correct-48">&#10004; Correct</h4>
 <pre lang=php>
 &lt;?php
 
@@ -3036,7 +2718,6 @@ $lastname = '';
 // EOF
 
 </pre>
-
 <pre lang=php>
 &lt;?php
 
@@ -3064,8 +2745,7 @@ class Office
 // EOF
 
 </pre>
-
-<h4 id="-10004-preferred">&#10004; Preferred</h4>
+<h4 id="10004-preferred-7">&#10004; Preferred</h4>
 <pre lang=php>
 &lt;?php
 
@@ -3080,12 +2760,11 @@ function get_movies() {
 // EOF
 
 </pre>
-
 <p>&#9650; <a href="#12-best-practices">Best Practices</a></p>
 <!-- ------------------------------ -->
 <h3 id="3-globals">3. Globals</h3>
 <p>Globals SHOULD NOT be used.</p>
-<h4 id="-acceptable">~ Acceptable</h4>
+<h4 id="-acceptable-9">~ Acceptable</h4>
 <pre lang=php>
 &lt;?php
 
@@ -3099,9 +2778,8 @@ function get_user($id) {
 // EOF
 
 </pre>
-
 <p>&#8627; Acceptable, but <code>global</code> variables should be avoided.</p>
-<h4 id="-10004-preferred">&#10004; Preferred</h4>
+<h4 id="10004-preferred-8">&#10004; Preferred</h4>
 <pre lang=php>
 &lt;?php
 
@@ -3117,12 +2795,11 @@ function get_user($id) {
 // EOF
 
 </pre>
-
 <p>&#9650; <a href="#12-best-practices">Best Practices</a></p>
 <!-- ------------------------------ -->
 <h3 id="4-explicit-expressions">4. Explicit Expressions</h3>
 <p>Explicit expressions SHOULD be used.</p>
-<h4 id="-acceptable">~ Acceptable</h4>
+<h4 id="-acceptable-10">~ Acceptable</h4>
 <pre lang=php>
 &lt;?php
 
@@ -3133,9 +2810,8 @@ if ($expr == true) {
 // EOF
 
 </pre>
-
 <p>&#8627; Acceptable, but <code>===</code> could be used here instead.</p>
-<h4 id="-10004-preferred">&#10004; Preferred</h4>
+<h4 id="10004-preferred-9">&#10004; Preferred</h4>
 <pre lang=php>
 &lt;?php
 
@@ -3146,12 +2822,11 @@ if ($expr === true) {
 // EOF
 
 </pre>
-
 <p>&#9650; <a href="#12-best-practices">Best Practices</a></p>
 <!-- ------------------------------ -->
 <h3 id="5-e_strict-reporting">5. E_STRICT Reporting</h3>
 <p>E_STRICT reporting MUST NOT trigger errors.</p>
-<h4 id="-10006-incorrect">&#10006; Incorrect</h4>
+<h4 id="10006-incorrect-47">&#10006; Incorrect</h4>
 <pre lang=php>
 &lt;?php
 
@@ -3160,9 +2835,8 @@ $firstname = call_user_method('get_firstname', $User);
 // EOF
 
 </pre>
-
 <p>&#8627; Incorrect because <code>call_user_method</code> (deprecated) will cause E_STRICT warning.</p>
-<h4 id="-10004-correct">&#10004; Correct</h4>
+<h4 id="10004-correct-49">&#10004; Correct</h4>
 <pre lang=php>
 &lt;?php
 
@@ -3171,9 +2845,197 @@ $firstname = call_user_func(array($User, 'get_firstname'));
 // EOF
 
 </pre>
-
 <p>&#9650; <a href="#12-best-practices">Best Practices</a></p>
-<hr>
+<hr />
 <p>&#9650; <a href="#table-of-contents">Table of Contents</a></p>
-<p>Inspired in part by style guides from:<br />
+<p>Inspired in part by style guides from:<br /><br />
 <a href="http://ellislab.com/codeigniter/user-guide/general/styleguide.html">CodeIgniter</a>, <a href="https://drupal.org/coding-standards">Drupal</a>, <a href="http://www.horde.org/apps/horde/docs/CODING_STANDARDS">Horde</a>, <a href="http://pear.php.net/manual/en/standards.php">Pear</a>, <a href="https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md">PSR-1</a>, <a href="https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md">PSR-2</a>, <a href="http://symfony.com/doc/current/contributing/code/standards.html">Symfony</a>, and <a href="http://make.wordpress.org/core/handbook/coding-standards/php/">WordPress</a>.</p>
+
+        </div>
+        <style type='text/css'>body {
+  font: 400 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #111;
+  background-color: #fdfdfd;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-feature-settings: "kern" 1;
+  -moz-font-feature-settings: "kern" 1;
+  -o-font-feature-settings: "kern" 1;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
+  padding: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    padding: 5px;
+  }
+
+  body > #content {
+    padding: 0px 20px 20px 20px !important;
+  }
+}
+
+body > #content {
+  margin: 0px;
+  max-width: 900px;
+  border: 1px solid #e1e4e8;
+  padding: 10px 40px;
+  padding-bottom: 20px;
+  border-radius: 2px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+hr {
+  color: #bbb;
+  background-color: #bbb;
+  height: 1px;
+  flex: 0 1 auto;
+  margin: 1em 0;
+  padding: 0;
+  border: none;
+}
+
+/**
+ * Links
+ */
+a {
+  color: #0366d6;
+  text-decoration: none; }
+  a:visited {
+    color: #0366d6; }
+  a:hover {
+    color: #0366d6;
+    text-decoration: underline; }
+
+pre {
+  background-color: #f6f8fa;
+  border-radius: 3px;
+  font-size: 85%;
+  line-height: 1.45;
+  overflow: auto;
+  padding: 16px;
+}
+
+/**
+  * Code blocks
+  */
+
+code {
+  background-color: rgba(27,31,35,.05);
+  border-radius: 3px;
+  font-size: 85%;
+  margin: 0;
+  word-wrap: break-word;
+  padding: .2em .4em;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+}
+
+pre > code {
+  background-color: transparent;
+  border: 0;
+  display: inline;
+  line-height: inherit;
+  margin: 0;
+  overflow: visible;
+  padding: 0;
+  word-wrap: normal;
+  font-size: 100%;
+}
+
+
+/**
+ * Blockquotes
+ */
+blockquote {
+  margin-left: 30px;
+  margin-top: 0px;
+  margin-bottom: 16px;
+  border-left-width: 3px;
+  padding: 0 1em;
+  color: #828282;
+  border-left: 4px solid #e8e8e8;
+  padding-left: 15px;
+  font-size: 18px;
+  letter-spacing: -1px;
+  font-style: italic;
+}
+blockquote * {
+  font-style: normal !important;
+  letter-spacing: 0;
+  color: #6a737d !important;
+}
+
+/**
+ * Tables
+ */
+table {
+  border-spacing: 2px;
+  display: block;
+  font-size: 14px;
+  overflow: auto;
+  width: 100%;
+  margin-bottom: 16px;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 6px 13px;
+  border: 1px solid #dfe2e5;
+}
+
+th {
+  font-weight: 600;
+  padding: 6px 13px;
+  border: 1px solid #dfe2e5;
+}
+
+tr {
+  background-color: #fff;
+  border-top: 1px solid #c6cbd1;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+
+/**
+ * Others
+ */
+
+img {
+  max-width: 100%;
+}
+
+p {
+  line-height: 24px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #24292e; }
+
+ul {
+  margin-top: 0; }
+
+li {
+  color: #24292e;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5; }
+
+li + li {
+  margin-top: 0.25em; }
+
+* {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: #24292e; }
+
+a:visited {
+  color: #0366d6; }
+
+h1, h2, h3 {
+  border-bottom: 1px solid #eaecef;
+  color: #111;
+  /* Darker */ }</style>
+      </body>
+    </html>
